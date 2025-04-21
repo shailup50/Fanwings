@@ -7,10 +7,11 @@ import {
     Navigate,
     BrowserRouter,
 } from "react-router-dom";
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import Home from './screen/home/Home';
-import Support from './screen/Support/Support';
+
+import Footer from './components/Footer/Footer.jsx';
+import Home from './screen/Home/Home.jsx';
+import Support from './screen/Support/Support.jsx';
+import Header from './components/Header/Header.jsx';
 function RouterList() {
     return (
         <>
