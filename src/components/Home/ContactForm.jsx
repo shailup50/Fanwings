@@ -12,15 +12,15 @@ export const Contact = () => {
         contact: [
             {
                 label: "24/7 FREE CALL US",
-                value: "011-1234567",
+                value: "+91-7017487891",
             },
             {
                 label: "WORKING HOURS",
-                value: "Mon to Fri\n09:00 – 6:00",
+                value: "Mon to Fri\n09:30 – 6:30",
             },
             {
                 label: "ASK FOR A FREE QUOTE",
-                value: "info@fanwings.in",
+                value: "sales@fanwings.in",
             },
         ],
     };
@@ -32,11 +32,11 @@ export const Contact = () => {
                     <h3 className='text-white'>Internal Rotor</h3>
                 </div>
             </section>
-            <section className='py-10'>
+            {/* <section className='py-10'>
                 <div className='max-w-7xl mx-auto px-6'>
                     <img src={image1} alt='image' className='w-full' />
                     <div className="text-center  py-10 pb-6 space-y-8">
-                        {/* Top Content */}
+
                         <div className="space-y-4">
                             <span className="inline-block bg-[#E0E0E0] text-sm px-8 py-2 rounded-full">
                                 {tag}
@@ -49,7 +49,7 @@ export const Contact = () => {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
             <div className='bg-[#1FA54D]'>
                 <div className='max-w-7xl mx-auto px-6'>
                     <div className=" text-white grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x">

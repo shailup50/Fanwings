@@ -26,7 +26,7 @@ export const Banner = () => {
         hero: {
             heading: ["Driven by Heart Inspired By Art"],
             description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra sed nisl, varius facilisis.",
+                "With cutting-edge technology and a commitment to quality.",
             buttonText: "Know More",
         },
         about: {
@@ -34,7 +34,8 @@ export const Banner = () => {
             title:
                 "Fanwings Airengineers Pvt. Ltd. is a high-tech enterprise located in Tapukara, Rajasthan.",
             description:
-                "The company is based on advanced production equipment and technology, focusing on the research and development, production, and sales of AC/EC high-efficiency energy-saving external rotor fans.The company specializes in producing a series of products such as axial flow fans, forward tilt single/double inlet centrifugal fans....",
+                `Fanwings Airengineers Pvt. Ltd. is a high-tech enterprise located in Tapukara, Rajasthan. The company is based on advanced production equipment and technology, focusing on the research and development, production, and sales of AC/EC high-efficiency energy-saving external rotor fans. <br/>
+                 The company specializes in producing a series of products such as axial flow fans, forward tilt single/double inlet centrifugal fans, and backward tilt centrifugal fans, which are characterized by high efficiency, energy conservation, and environmental protection. They are widely used in the HVAC industry, data centers, negative pressure wards, energy storage industry, cold chain, new energy and other fields. With advanced production processes and strict quality control systems, the company's products have successively passed CCC, CE, and ROHS certifications, providing reliable product guarantees for global customers, comprehensively deepening strategic cooperation, and working together to achieve mutual benefit and win-win results.`,
             readMore: "Read More",
         },
     };
@@ -55,11 +56,11 @@ export const Banner = () => {
                                 ))}
                             </h1>
                             <p className="mb-10 text-base font-light text-white opacity-80 md:text-lg">{hero.description}</p>
-                            <button className="bg-[#1FA54D] hover:bg-white text-white py-3 md:py-4 px-6 md:px-10 rounded-full flex items-center gap-4 hover:text-[#1FA54D]">
+                            {/* <button className="bg-[#1FA54D] hover:bg-white text-white py-3 md:py-4 px-6 md:px-10 rounded-full flex items-center gap-4 hover:text-[#1FA54D]">
                                 {hero.buttonText}
                                 <BsArrowRightCircle className='text-xl' />
 
-                            </button>
+                            </button> */}
                         </div>
 
                     </div>
@@ -90,11 +91,13 @@ export const Banner = () => {
                         </div>
                     </div>
                     <div className='md:col-span-7 '>
-                        <p className="text-black opacity-80 text-base md:text-[17px] font-light mb-8">{about.description}</p>
-                        <button className="text-[#1FA54D] font-medium flex items-center gap-4 hover:underline">
+                        <p className="text-black opacity-80 text-base md:text-[17px] font-light mb-8"
+                          dangerouslySetInnerHTML={{ __html: about.description }}
+                        />
+                        {/* <button className="text-[#1FA54D] font-medium flex items-center gap-4 hover:underline">
                             {about.readMore}
                             <BsArrowRightCircleFill className="text-lg" />
-                        </button>
+                        </button> */}
                     </div>
                 </section>
             </div>
