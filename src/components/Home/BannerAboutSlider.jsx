@@ -16,6 +16,12 @@ import slider3 from '../../assets/home/slider3.webp'
 import slider4 from '../../assets/home/slider4.webp'
 import slider5 from '../../assets/home/slider5.webp'
 import slider6 from '../../assets/home/slider6.webp'
+import slider7 from '../../assets/home/slider7.webp'
+import slider8 from '../../assets/home/slider8.webp'
+import slider9 from '../../assets/home/slider9.webp'
+import slider10 from '../../assets/home/slider10.webp'
+import slider11 from '../../assets/home/slider11.webp'
+import slider12 from '../../assets/home/slider12.webp'
 import bgslider from '../../assets/home/bg-slider.webp'
 
 
@@ -92,7 +98,7 @@ export const Banner = () => {
                     </div>
                     <div className='md:col-span-7 '>
                         <p className="text-black opacity-80 text-base md:text-[17px] font-light mb-8"
-                          dangerouslySetInnerHTML={{ __html: about.description }}
+                            dangerouslySetInnerHTML={{ __html: about.description }}
                         />
                         {/* <button className="text-[#1FA54D] font-medium flex items-center gap-4 hover:underline">
                             {about.readMore}
@@ -123,14 +129,14 @@ export const Slider = () => {
         }
     }, [swiperInstance]);
     const sliderData = [
-        {
-            title: "Refrigeration & Air-Conditioning",
-            subtitle: "Industry And Applications",
-            description:
-                "Refrigeration technology is widely used in cooling towers, with fans playing a fundamental role. In the cooling tower, timely discharge of vaporized cooling medium is crucial for reducing the temperature inside...",
-            image: slider1,
-            btnText: "Know More",
-        },
+        // {
+        //     title: "Refrigeration & Air-Conditioning",
+        //     subtitle: "Industry And Applications",
+        //     description:
+        //         "Refrigeration technology is widely used in cooling towers, with fans playing a fundamental role. In the cooling tower, timely discharge of vaporized cooling medium is crucial for reducing the temperature inside...",
+        //     image: slider1,
+        //     btnText: "Know More",
+        // },
         {
             title: "Data Center",
             subtitle: "Industry And Applications",
@@ -171,6 +177,55 @@ export const Slider = () => {
             image: slider6,
             btnText: "Know More",
         },
+        {
+            title: "Aircooling",
+            subtitle: "Industry And Applications",
+            description:
+                "It enhances comfort for using efficient aeronautically designed blades.",
+            image: slider7,
+            btnText: "Know More",
+        },
+        {
+            title: "AHU/CSU",
+            subtitle: "Industry And Applications",
+            description:
+                `1. An AHU (Air Handling Unit) conditions and circulates air as part of an HVAC system, regulating temperature, humidity, and air quality. <br/>  2. A CSU (Ceiling Suspended Unit) is a compact cooling system mounted on the ceiling, ideal for saving space while providing effective air distribution.`,
+            image: slider8,
+            btnText: "Know More",
+        },
+        {
+            title: "Air cooled chillers",
+            subtitle: "Industry And Applications",
+            description:
+                "An air-cooled chiller uses ambient air to dissipate heat from the refrigerant, making it ideal for outdoor installations. It provides efficient cooling without the need for a cooling tower, simplifying maintenance and reducing water usage.",
+            image: slider9,
+            btnText: "Know More",
+        },
+        {
+            title: "UPS/ Battery cooling",
+            subtitle: "Industry And Applications",
+            description:
+                "A UPS (Uninterruptible Power Supply) provides backup power. Battery cooling systems in UPS units maintain optimal temperatures to enhance battery life and prevent overheating.  ",
+            image: slider10,
+            btnText: "Know More",
+        },
+        {
+            title: "Refrigeration",
+            subtitle: "Industry And Applications",
+            description:
+                "A box-type fan in refrigeration systems ensures uniform airflow across evaporator coils for efficient heat exchange. It is compact and enclosed, offering reliable cooling performance while protecting internal components from dust and damage.",
+            image: slider11,
+            btnText: "Know More",
+        },
+
+        {
+            title: "Railways / Buses",
+            subtitle: "Industry And Applications",
+            description:
+                "Railway fans are designed for high durability and consistent airflow to ensure passenger comfort in varying travel conditions whereas Bus fans are compact and energy-efficient, providing ventilation and cooling in confined spaces to enhance passenger experience.",
+            image: slider12,
+            btnText: "Know More",
+        },
 
     ];
     return (
@@ -199,7 +254,10 @@ export const Slider = () => {
                                     <div className="py-12 pb-40 md:py-24  w-full md:w-1/2 order-2 md:order-1">
                                         <h4 className="text-sm mb-4 -mt-8 md:mt-0">{item.subtitle}</h4>
                                         <h2 className="text-2xl md:text-3xl mb-4">{item.title}</h2>
-                                        <p className="mb-6 md:mb-10 text-sm font-light md:text-base">{item.description}</p>
+                                        <p
+                                            className="mb-6 md:mb-10 text-sm font-light md:text-base"
+                                            dangerouslySetInnerHTML={{ __html: item.description }}
+                                        ></p>
                                         <button className="bg-[#1FA54D] hover:bg-white text-white py-3 md:py-4 px-6 md:px-10 rounded-full flex items-center gap-4 hover:text-[#1FA54D]">
                                             {item.btnText}
                                             <BsArrowRightCircle className='text-xl' />
@@ -234,8 +292,8 @@ export const Slider = () => {
 
                                 </button>
                                 <div className="order-2">
-                                <div className="custom-pagination4 white-pagination flex justify-start mb-3 space-x-2"></div>
-                            </div>
+                                    <div className="custom-pagination4 white-pagination flex justify-start mb-3 space-x-2"></div>
+                                </div>
                             </div>
 
                         </div>

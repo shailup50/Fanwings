@@ -27,11 +27,11 @@ export const Contact = () => {
     const { tag, heading, description, contact } = newsSectionData;
     return (
         <>
-            <section className='py-4 bg-[#052B98]'>
+            {/* <section className='py-4 bg-[#052B98]'>
                 <div className='max-w-7xl mx-auto px-6'>
                     <h3 className='text-white'>Internal Rotor</h3>
                 </div>
-            </section>
+            </section> */}
             {/* <section className='py-10'>
                 <div className='max-w-7xl mx-auto px-6'>
                     <img src={image1} alt='image' className='w-full' />

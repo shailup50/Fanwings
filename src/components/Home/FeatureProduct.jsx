@@ -175,9 +175,9 @@ export const Feature = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <button className="text-[#1FA54D] font-medium flex items-center gap-4 hover:underline">
+                                {/* <button className="text-[#1FA54D] font-medium flex items-center gap-4 hover:underline">
                                     Know More <IoArrowForwardCircleSharp className="text-2xl" />
-                                </button>
+                                </button> */}
                             </div>
                         </SwiperSlide>
                     ))}
@@ -197,7 +197,7 @@ export const Product = () => {
             description:
                 'Axial flow fans are characterized by small installation depth, low noise, high efficiency, and are particularly suitable for air flow in heat exchangers. Sanmu\'s EC technology will change...',
             img: image1,
-            buttons: ['External Rotor', 'AC', 'DC'],
+            buttons: [ 'AC', 'DC'],
         },
         {
             title: 'Shaded Pole Motor',
@@ -277,14 +277,24 @@ export const Product = () => {
                                         <p className="text-white/90 font-light">{item.description}</p>
                                         <div className="flex flex-wrap gap-4 pt-6">
                                             {item.buttons.map((btn, i) => (
+                                            //     <button
+                                            //     key={i}
+                                            //     className={`px-4 py-2 font-normal text-sm flex items-center gap-0 ${i === 0
+                                            //         ? 'bg-white px-8 text-black'
+                                            //         : 'text-white  px-4 pr-0 transition '
+                                            //         }`}
+                                            // >
+                                            //     {i !== 0 && <IoMdArrowDropright className="text-lg" />}
+                                            //     {btn}
+                                            // </button>
                                                 <button
                                                     key={i}
                                                     className={`px-4 py-2 font-normal text-sm flex items-center gap-0 ${i === 0
-                                                        ? 'bg-white px-8 text-black'
+                                                        ? 'text-white  px-4 pr-0 transition'
                                                         : 'text-white  px-4 pr-0 transition '
                                                         }`}
                                                 >
-                                                    {i !== 0 && <IoMdArrowDropright className="text-lg" />}
+                                                    {i !== 6 && <IoMdArrowDropright className="text-lg" />}
                                                     {btn}
                                                 </button>
                                             ))}
