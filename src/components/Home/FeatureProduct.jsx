@@ -15,6 +15,7 @@ import productimg3 from "../../assets/home/product3.png";
 import productimg4 from "../../assets/home/product4.png";
 import BusMotor from "../../assets/home/Busmotor.webp";
 import InlineFan from "../../assets/home/Inline-Fan.webp";
+import BoxType from "../../assets/home/BoxType.webp";
 import TrainMotor from "../../assets/home/busfan2.webp";
 import BackwardAxial from "../../assets/home/BackwardCurveFan.webp";
 import Motor from "../../assets/home/Motor.webp";
@@ -83,8 +84,18 @@ export const Feature = () => {
       ],
     },
     {
+      title: "Buses : Fan and Blower",
+      images: BusMotor,
+      specs: [
+        "Compact and space-saving.",
+        "Low power consumption",
+        "Quiet and smooth operation",
+        "Quick cabin cooling.",
+      ],
+    },
+    {
       title: "Box Type Fan",
-      images: productimg1,
+      images: BoxType,
       specs: [
         "Commonly used in refrigeration and ventilation systems.",
         "Protects internal components from dust, debris, and damage.",
@@ -93,6 +104,7 @@ export const Feature = () => {
         "Suitable for industrial and commercial use.",
       ],
     },
+
     {
       title: "Motor: AC, EC, DC",
       images: Motor,
@@ -105,16 +117,7 @@ export const Feature = () => {
         "Efficiency	70–85%",
       ],
     },
-    {
-      title: "Buses : Fan and Blower",
-      images: BusMotor,
-      specs: [
-        "Compact and space-saving.",
-        "Low power consumption",
-        "Quiet and smooth operation",
-        "Quick cabin cooling.",
-      ],
-    },
+
     {
       title: "Railways : Fan and Blower",
       images: TrainMotor,

@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 // import banner from "../../assets/home/banner.webp";
-import banner from "../../assets/home/homeHero.webp";
+import banner from "../../assets/home/fanwings-banner.webp";
 import slider1 from "../../assets/home/slider1.webp";
 import slider2 from "../../assets/home/slider2.webp";
 import slider3 from "../../assets/home/slider3.webp";
