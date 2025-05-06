@@ -14,8 +14,10 @@ import productimg2 from "../../assets/home/product2.png";
 import productimg3 from "../../assets/home/product3.png";
 import productimg4 from "../../assets/home/product4.png";
 import BusMotor from "../../assets/home/Busmotor.webp";
+import InlineFan from "../../assets/home/Inline-Fan.webp";
 import TrainMotor from "../../assets/home/busfan2.webp";
-import BackwardAxial from "../../assets/home/backwardAxial.webp";
+import BackwardAxial from "../../assets/home/BackwardCurveFan.webp";
+import Motor from "../../assets/home/Motor.webp";
 import ForwardCurveFan from "../../assets/home/ForwardCurveFan.webp";
 import image1 from "../../assets/home/image1.webp";
 import ImageArial from "../../assets/home/imageArial.webp";
@@ -91,20 +93,18 @@ export const Feature = () => {
         "Suitable for industrial and commercial use.",
       ],
     },
-    // {
-    //   title: "Motor: AC, EC, DC",
-    //   images: productimg1,
-    //   specs: [
-    //     "EC Centrifugal Fans",
-    //     "Voltage: 230,400 VAC",
-    //     "Size: 133 to 630 mm",
-    //     "Application: Data center, AHU, FFU",
-    //     "Centrifugal Blowers – Single/ Dual Inlet",
-    //     "Voltage: 230,415 V",
-    //     "Size: 120 mm to 225mm",
-    //     "Application: Plastic extrusion, Inverters",
-    //   ],
-    // },
+    {
+      title: "Motor: AC, EC, DC",
+      images: Motor,
+      specs: [
+        "Voltage Range	6V – 48V (common); up to 400V (industrial)",
+        "Power Output	1W – several kW",
+        "Speed	1000–5000 RPM",
+        "Control	Voltage variation (manual or PWM)",
+        "Centrifugal Blowers – Single/ Dual Inlet",
+        "Efficiency	70–85%",
+      ],
+    },
     {
       title: "Buses : Fan and Blower",
       images: BusMotor,
@@ -127,7 +127,7 @@ export const Feature = () => {
     },
     {
       title: "Inline Fans",
-      images: productimg1,
+      images: InlineFan,
       specs: [
         "Designed to fit within ductwork,.",
         "Offering efficient airflow without taking up extra space",
