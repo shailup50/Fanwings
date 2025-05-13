@@ -13,10 +13,10 @@ import productimg1 from "../../assets/home/product1.png";
 import productimg2 from "../../assets/home/product2.png";
 import productimg3 from "../../assets/home/product3.png";
 import productimg4 from "../../assets/home/product4.png";
-import BusMotor from "../../assets/home/Busmotor.webp";
+import BusMotor from "../../assets/home/busblower.webp";
 import InlineFan from "../../assets/home/Inline-Fan.webp";
 import BoxType from "../../assets/home/BoxType.webp";
-import TrainMotor from "../../assets/home/busfan2.webp";
+import TrainMotor from "../../assets/home/TrainBlower.webp";
 import BackwardAxial from "../../assets/home/BackwardCurveFan.webp";
 import Motor from "../../assets/home/Motor.webp";
 import ForwardCurveFan from "../../assets/home/ForwardCurveFan.webp";
@@ -105,18 +105,18 @@ export const Feature = () => {
       ],
     },
 
-    {
-      title: "Motor: AC, EC, DC",
-      images: Motor,
-      specs: [
-        "Voltage Range	6V – 48V (common); up to 400V (industrial)",
-        "Power Output	1W – several kW",
-        "Speed	1000–5000 RPM",
-        "Control	Voltage variation (manual or PWM)",
-        "Centrifugal Blowers – Single/ Dual Inlet",
-        "Efficiency	70–85%",
-      ],
-    },
+    // {
+    //   title: "Motor: AC, EC, DC",
+    //   images: Motor,
+    //   specs: [
+    //     "Voltage Range	6V – 48V (common); up to 400V (industrial)",
+    //     "Power Output	1W – several kW",
+    //     "Speed	1000–5000 RPM",
+    //     "Control	Voltage variation (manual or PWM)",
+    //     "Centrifugal Blowers – Single/ Dual Inlet",
+    //     "Efficiency	70–85%",
+    //   ],
+    // },
 
     {
       title: "Railways : Fan and Blower",
@@ -255,7 +255,7 @@ export const Product = () => {
     {
       title: "AC/EC Axial flow fan",
       description:
-        "Axial flow fans are characterized by small installation depth, low noise, high efficiency, and are particularly suitable for air flow in heat exchangers. Sanmu's EC technology will change...",
+        "Axial flow fans are characterized by small installation depth, low noise, high efficiency, and are particularly suitable for air flow in heat exchangers.",
       img: ImageArial,
       buttons: ["AC", "DC"],
     },
@@ -269,7 +269,7 @@ export const Product = () => {
     {
       title: "Centrifugal Fan",
       description:
-        "Shaded pole motors are ideal for low-torque applications. Known for simplicity and reliability in fans and blowers.",
+        "A centrifugal fan is a mechanical device that moves air or gases by using a rotating impeller. As the impeller spins, it draws air into the center and pushes it outward through the fan housing by centrifugal force. This type of fan is commonly used in ventilation, heating, and air conditioning systems, as well as in industrial processes, due to its ability to handle high pressure and move air efficiently.",
       img: productimg4,
       buttons: ["C Frame", "230V"],
     },

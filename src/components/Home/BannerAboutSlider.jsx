@@ -159,24 +159,24 @@ export const Slider = () => {
       title: "Ventilation & Purification",
       subtitle: "Industry And Applications",
       description:
-        "Mingzhen Electronics provides   comprehensive solutions for building air conditioning and ventilation equipment, helping to solve problems in building ventilation design. In building ventilation  design, selecting the appropriate fan is...",
-      image: slider5,
+        "It provides comprehensive solutions for building air conditioning and ventilation equipment, helping to solve problems in building ventilation design.",
+      image: slider5, //change image
       btnText: "Know More",
     },
+    // {
+    //   title: "Medical purification",
+    //   subtitle: "Industry And Applications",
+    //   description:
+    //     "In medical facilities, bacteria, viruses, and harmful substances in the air may pose a threat to the health of patients, so maintaining the cleanliness and purity of the air is crucial. The fan can remove  pollutants such as bacteria, viruses, and...",
+    //   image: slider6,
+    //   btnText: "Know More",
+    // },
     {
-      title: "Medical purification",
-      subtitle: "Industry And Applications",
-      description:
-        "In medical facilities, bacteria, viruses, and harmful substances in the air may pose a threat to the health of patients, so maintaining the cleanliness and purity of the air is crucial. The fan can remove  pollutants such as bacteria, viruses, and...",
-      image: slider6,
-      btnText: "Know More",
-    },
-    {
-      title: "Aircooling",
+      title: "Air Washers",
       subtitle: "Industry And Applications",
       description:
         "It enhances comfort for using efficient aeronautically designed blades.",
-      image: slider7,
+      image: slider7, //image-change
       btnText: "Know More",
     },
     {
@@ -199,7 +199,7 @@ export const Slider = () => {
       subtitle: "Industry And Applications",
       description:
         "A UPS (Uninterruptible Power Supply) provides backup power. Battery cooling systems in UPS units maintain optimal temperatures to enhance battery life and prevent overheating.  ",
-      image: slider10,
+      image: slider10, //image change
       btnText: "Know More",
     },
     {
@@ -212,10 +212,18 @@ export const Slider = () => {
     },
 
     {
-      title: "Railways / Buses",
+      title: "Buses",
       subtitle: "Industry And Applications",
       description:
-        "Railway fans are designed for high durability and consistent airflow to ensure passenger comfort in varying travel conditions whereas Bus fans are compact and energy-efficient, providing ventilation and cooling in confined spaces to enhance passenger experience.",
+        "Bus fans are compact and energy-efficient, providing ventilation and cooling in confined spaces to enhance passenger experience",
+      image: slider12,
+      btnText: "Know More",
+    },
+    {
+      title: " Railways",
+      subtitle: "Industry And Applications",
+      description:
+        "Railways fans are designed for high durability and consistent airflow to ensure passenger comfort in varying travel conditions .",
       image: slider12,
       btnText: "Know More",
     },
