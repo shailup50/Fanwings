@@ -18,11 +18,12 @@ import slider4 from "../../assets/home/slider4.webp";
 import slider5 from "../../assets/home/slider5.webp";
 import slider6 from "../../assets/home/slider6.webp";
 import slider7 from "../../assets/home/slider7.webp";
-import slider8 from "../../assets/home/slider8.webp";
+import slider8 from "../../assets/home/slider8new.webp";
 import slider9 from "../../assets/home/slider9.webp";
 import slider10 from "../../assets/home/slider10.webp";
 import slider11 from "../../assets/home/slider11.webp";
 import slider12 from "../../assets/home/slider12.webp";
+import slider13 from "../../assets/home/slider13.webp";
 import bgslider from "../../assets/home/bg-slider.webp";
 
 export const Banner = () => {
@@ -216,7 +217,7 @@ export const Slider = () => {
       subtitle: "Industry And Applications",
       description:
         "Bus fans are compact and energy-efficient, providing ventilation and cooling in confined spaces to enhance passenger experience",
-      image: slider12,
+      image: slider13,
       btnText: "Know More",
     },
     {
