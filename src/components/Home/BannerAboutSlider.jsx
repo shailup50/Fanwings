@@ -11,19 +11,17 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 // import banner from "../../assets/home/banner.webp";
 import banner from "../../assets/home/fanwings-banner.webp";
-import slider1 from "../../assets/home/slider1.webp";
-import slider2 from "../../assets/home/slider2.webp";
-import slider3 from "../../assets/home/slider3.webp";
-import slider4 from "../../assets/home/slider4.webp";
-import slider5 from "../../assets/home/slider5.webp";
-import slider6 from "../../assets/home/slider6.webp";
-import slider7 from "../../assets/home/slider7.webp";
-import slider8 from "../../assets/home/slider8new.webp";
-import slider9 from "../../assets/home/slider9.webp";
-import slider10 from "../../assets/home/slider10.webp";
-import slider11 from "../../assets/home/slider11.webp";
-import slider12 from "../../assets/home/slider12.webp";
-import slider13 from "../../assets/home/slider13.webp";
+import slider1 from "../../assets/Industries/Refrigeration.webp";
+import slider2 from "../../assets/Industries/AircooledChillers.webp";
+import slider3 from "../../assets/Industries/PackageUnit.webp";
+import slider4 from "../../assets/Industries/AirHandlingUnit.webp";
+import slider5 from "../../assets/Industries/FanFilterUnit.webp";
+import slider6 from "../../assets/Industries/ColdRoom.webp";
+import slider7 from "../../assets/Industries/Adiabatic.webp";
+import slider8 from "../../assets/Industries/Renewables.webp";
+import slider9 from "../../assets/Industries/EVChargers.webp";
+import slider10 from "../../assets/Industries/UPSInverter.webp";
+import slider11 from "../../assets/Industries/MobilityHVAC.webp";
 import bgslider from "../../assets/home/bg-slider.webp";
 
 export const Banner = () => {
@@ -124,108 +122,94 @@ export const Slider = () => {
     }
   }, [swiperInstance]);
   const sliderData = [
-    // {
-    //     title: "Refrigeration & Air-Conditioning",
-    //     subtitle: "Industry And Applications",
-    //     description:
-    //         "Refrigeration technology is widely used in cooling towers, with fans playing a fundamental role. In the cooling tower, timely discharge of vaporized cooling medium is crucial for reducing the temperature inside...",
-    //     image: slider1,
-    //     btnText: "Know More",
-    // },
     {
-      title: "Data Center",
+      title: "Refrigeration & Air-Conditioning",
       subtitle: "Industry And Applications",
       description:
-        "Fans play an important role in data centers, mainly used for heat dissipation, air circulation, and energy conservation. As one of the basic components in the data center cooling system, fans generate airflow, transfer the heat...   ",
+        "Refrigeration technology is widely used in cooling towers, with fans playing a fundamental role. In the cooling tower, timely discharge of vaporized cooling medium is crucial for reducing the temperature inside.",
+      image: slider1,
+      btnText: "Know More",
+    },
+    {
+      title: "Air cooled Chillers",
+      subtitle: "Industry And Applications",
+      description:
+        "•Air-Cooled Chillers are a type of refrigeration system commonly used for cooling large buildings, industrial processes, or equipment.",
       image: slider2,
       btnText: "Know More",
     },
     {
-      title: "Energy & Environment   ",
+      title: "Packaged Unit/Ductable Split",
       subtitle: "Industry And Applications",
       description:
-        "Energy and the environment are one of the most important global issues related to human survival and development. In this context, the energy and environmental industries bear an important mission of safeguarding the...",
+        "•A Package Unit Air Conditioner (also called a Packaged Air Conditioning Unit) is a self-contained HVAC system that combines all components—compressor, condenser, evaporator, and expansion device—into a single housing.",
       image: slider3,
       btnText: "Know More",
     },
     {
-      title: "Fan Renovation",
+      title: "Air Handling Unit (AHU)",
       subtitle: "Industry And Applications",
       description:
-        "In the fields of refrigeration, air  conditioning, and building services, AC asynchronous motors are commonly used to drive fans. However, the  efficiency of this method is relatively low, leading to an increase in energy...  ",
+        "•An AHU (Air Handling Unit) is a key component of an HVAC (Heating, Ventilation, and Air Conditioning) system. Its main function is to circulate, filter, and condition air within a building. It does not generate cooling or heating on its own—it works in coordination with chillers, boilers, or direct expansion (DX) systems.",
       image: slider4,
       btnText: "Know More",
     },
     {
-      title: "Ventilation & Purification",
+      title: "Fan Filter Unit (FFU)",
       subtitle: "Industry And Applications",
       description:
-        "It provides comprehensive solutions for building air conditioning and ventilation equipment, helping to solve problems in building ventilation design.",
-      image: slider5, //change image
+        "•An FFU is a self-contained air filtration module that combines a fan and a HEPA or ULPA filter in one unit. It is used to supply clean, filtered air to controlled environments such as cleanrooms, labs, or sensitive manufacturing areas (e.g., semiconductor or pharmaceutical production).",
+      image: slider5,
       btnText: "Know More",
     },
-    // {
-    //   title: "Medical purification",
-    //   subtitle: "Industry And Applications",
-    //   description:
-    //     "In medical facilities, bacteria, viruses, and harmful substances in the air may pose a threat to the health of patients, so maintaining the cleanliness and purity of the air is crucial. The fan can remove  pollutants such as bacteria, viruses, and...",
-    //   image: slider6,
-    //   btnText: "Know More",
-    // },
     {
-      title: "Air Washers",
+      title: "Cold Room",
       subtitle: "Industry And Applications",
       description:
-        "It enhances comfort for using efficient aeronautically designed blades.",
+        "A cold room is a refrigerated storage area maintained at a specific low temperature, typically between -30°C and +10°C, used to preserve perishable items such as food, pharmaceuticals, and biological samples.",
+      image: slider6,
+      btnText: "Know More",
+    },
+    {
+      title: "Adiabatic Cooler/Cooling Tower",
+      subtitle: "Industry And Applications",
+      description:
+        "Adiabatic cooling is a natural cooling process in which air temperature is reduced without adding or removing heat, by reducing the air pressure, or more commonly in HVAC, by evaporating water into the air. It’s a key principle in evaporative cooling systems.A Cooling Tower is a heat rejection device that removes unwanted heat from a building or industrial process by cooling a water stream through evaporative cooling.<br/> It’s most commonly used in large HVAC systems and industrial facilities where chillers or processes produce excess heat.",
       image: slider7, //image-change
       btnText: "Know More",
     },
     {
-      title: "AHU/CSU",
+      title: "Renewables",
       subtitle: "Industry And Applications",
-      description: `1. An AHU (Air Handling Unit) conditions and circulates air as part of an HVAC system, regulating temperature, humidity, and air quality. <br/>  2. A CSU (Ceiling Suspended Unit) is a compact cooling system mounted on the ceiling, ideal for saving space while providing effective air distribution.`,
+      description: `Renewables, or renewable energy sources, refer to energy derived from natural processes that are continuously replenished. These sources are key to building a sustainable energy future and reducing greenhouse gas emissions.`,
       image: slider8,
       btnText: "Know More",
     },
     {
-      title: "Air cooled chillers",
+      title: "EV Chargers & Battery Storage",
       subtitle: "Industry And Applications",
       description:
-        "An air-cooled chiller uses ambient air to dissipate heat from the refrigerant, making it ideal for outdoor installations. It provides efficient cooling without the need for a cooling tower, simplifying maintenance and reducing water usage.",
+        "EV chargers supply electricity to recharge electric vehicles (EVs). For an industrial setting like a fan manufacturing plant, they serve both operational and employee/fleet purposes.<br/>Battery storage systems store electrical energy for later use. For an industrial fan plant, these systems help manage energy demand, ensure backup power, and enable integration with renewable sources like solar.",
       image: slider9,
       btnText: "Know More",
     },
     {
-      title: "UPS/ Battery cooling",
+      title: "UPS/Inverter",
       subtitle: "Industry And Applications",
       description:
-        "A UPS (Uninterruptible Power Supply) provides backup power. Battery cooling systems in UPS units maintain optimal temperatures to enhance battery life and prevent overheating.  ",
+        "A UPS is a device that provides instantaneous backup power when the main power source fails. It bridges the gap between a power outage and the startup of a generator or transfer to battery systems.<br/>An Inverters are used to control the speed of fan motors by adjusting the frequency and voltage of the power supplied.",
       image: slider10, //image change
       btnText: "Know More",
     },
     {
-      title: "Refrigeration",
+      title: "Mobility - HVAC",
       subtitle: "Industry And Applications",
-      description:
-        "A box-type fan in refrigeration systems ensures uniform airflow across evaporator coils for efficient heat exchange. It is compact and enclosed, offering reliable cooling performance while protecting internal components from dust and damage.",
+      description: `Mobility HVAC refers to Heating, Ventilation, and Air Conditioning systems used in mobile applications, such as:<br/>
+•Vehicles (cars, buses, trucks)<br/>
+•Trains<br/>
+•Aircraft<br/>
+•Ships<br/>`,
       image: slider11,
-      btnText: "Know More",
-    },
-
-    {
-      title: "Buses",
-      subtitle: "Industry And Applications",
-      description:
-        "Bus fans are compact and energy-efficient, providing ventilation and cooling in confined spaces to enhance passenger experience",
-      image: slider13,
-      btnText: "Know More",
-    },
-    {
-      title: " Railways",
-      subtitle: "Industry And Applications",
-      description:
-        "Railways fans are designed for high durability and consistent airflow to ensure passenger comfort in varying travel conditions .",
-      image: slider12,
       btnText: "Know More",
     },
   ];
