@@ -11,7 +11,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 // import banner from "../../assets/home/banner.webp";
 import banner from "../../assets/home/fanwings-banner.webp";
-import slider1 from "../../assets/Industries/Refrigeration.webp";
+import slider1 from "../../assets/Industries/FanCoilUnit.webp";
 import slider2 from "../../assets/Industries/AircooledChillers.webp";
 import slider3 from "../../assets/Industries/PackageUnit.webp";
 import slider4 from "../../assets/Industries/AirHandlingUnit.webp";
@@ -122,10 +122,10 @@ export const Slider = () => {
   }, [swiperInstance]);
   const sliderData = [
     {
-      title: "Refrigeration & Air-Conditioning",
+      title: "Fan Coil Unit (FCU)",
       subtitle: "Industry And Applications",
       description:
-        "Refrigeration technology is widely used in cooling towers, with fans playing a fundamental role. In the cooling tower, timely discharge of vaporized cooling medium is crucial for reducing the temperature inside.",
+        "It's a simple, compact unit that uses a coil and a fan to condition air and is commonly found in hotels, offices, hospitals, and residential buildings",
       image: slider1,
       btnText: "Know More",
     },
