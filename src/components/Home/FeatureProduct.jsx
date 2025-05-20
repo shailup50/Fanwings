@@ -385,10 +385,10 @@ export const Product = () => {
         >
           {productData.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 mt-18 md:mt-0">
+              <div className="grid grid-cols-1  lg:grid-cols-12 items-center gap-8 mt-18 md:mt-0">
                 {/* Text Content */}
                 <div className="lg:col-span-7 space-y-4 order-2 lg:order-1 md:w-[88%]">
-                  <div className="flex items-center gap-5 mb-2 font-light">
+                  <div className="md:order-1 order-2 flex items-center gap-5 mb-2 font-light">
                     <img src={icon} alt="icon" height={35} width={35} />
                     <span>Product Series</span>
                   </div>
@@ -424,7 +424,7 @@ export const Product = () => {
                 </div>
 
                 {/* Image */}
-                <div className="lg:col-span-5 order-1 lg:order-2">
+                <div className="lg:col-span-5 order-2 ">
                   <div className="flex justify-center">
                     <img
                       src={item.image}

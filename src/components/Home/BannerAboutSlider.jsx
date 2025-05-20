@@ -27,8 +27,8 @@ import bgslider from "../../assets/home/bg-slider.webp";
 export const Banner = () => {
   const heroData = {
     hero: {
-      heading: ["Driven by Heart Inspired By Art"],
-      description: "Crafted by Aerodynamics. Powered by Technology",
+      heading: ["Crafted by Aerodynamics. Powered by Technology"],
+      description: "With cutting-edge technology and a commitment to quality.",
       buttonText: "Know More",
     },
     about: {
