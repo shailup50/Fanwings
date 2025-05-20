@@ -28,13 +28,12 @@ export const Banner = () => {
   const heroData = {
     hero: {
       heading: ["Driven by Heart Inspired By Art"],
-      description: "With cutting-edge technology and a commitment to quality.",
+      description: "Crafted by Aerodynamics. Powered by Technology",
       buttonText: "Know More",
     },
     about: {
       tag: "About Fanwings",
-      title:
-        "Fanwings Airengineers Pvt. Ltd. is a high-tech enterprise located in Tapukara, Rajasthan.",
+      title: "Driving the Future of Airflow Innovation",
       description: `Fanwings Airengineers Pvt. Ltd. is a high-tech enterprise located in Tapukara, Rajasthan. The company is based on advanced production equipment and technology, focusing on the research and development, production, and sales of AC/EC high-efficiency energy-saving external rotor fans. <br/>
                  The company specializes in producing a series of products such as axial flow fans, forward tilt single/double inlet centrifugal fans, and backward tilt centrifugal fans, which are characterized by high efficiency, energy conservation, and environmental protection. They are widely used in the HVAC industry, data centers, negative pressure wards, energy storage industry, cold chain, new energy and other fields. With advanced production processes and strict quality control systems, the company's products have successively passed CCC, CE, and ROHS certifications, providing reliable product guarantees for global customers, comprehensively deepening strategic cooperation, and working together to achieve mutual benefit and win-win results.`,
       readMore: "Read More",
