@@ -50,7 +50,7 @@ export const Banner = () => {
         >
           <div className="max-w-7xl mx-auto px-6 md:py-10 md:pb-28 grid md:grid-cols-5 items-center z-10 relative">
             <div className="col-span-1 md:col-span-2">
-              <h1 className="text-4xl md:text-5xl font-medium leading-snug mb-6">
+              <h1 className="text-3xl md:text-5xl font-medium leading-snug mb-6">
                 {hero.heading.map((line, i) => (
                   <div key={i}>{line}</div>
                 ))}
