@@ -62,11 +62,11 @@ export const Banner = () => {
             autoplay={{ delay: 5000 }}
             loop
             pagination={{ clickable: true }}
-            className="w-full h-[80vh]"
+            className="w-fullh-[200px] md:h-[80vh]"
           >
             {slides.map((slide, idx) => (
               <SwiperSlide key={idx}>
-                <div className="relative h-[80vh] w-full">
+                <div className="relative h-[200px] md:h-[80vh] w-full">
                   <img
                     src={slide.img}
                     alt="Slide"
