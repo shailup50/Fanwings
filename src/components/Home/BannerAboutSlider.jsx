@@ -3,7 +3,7 @@ import { BsArrowRightCircleFill } from "react-icons/bs";
 import { BsArrowRightCircle } from "react-icons/bs";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -11,6 +11,9 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 // import banner from "../../assets/home/banner.webp";
 import banner from "../../assets/home/fanwings-banner.webp";
+import Banner1 from "../../assets/home/Banner1.webp";
+import Banner2 from "../../assets/home/Banner2.webp";
+import Banner3 from "../../assets/home/Banner3.webp";
 import slider1 from "../../assets/Industries/FanCoilUnit.webp";
 import slider2 from "../../assets/Industries/AircooledChillers.webp";
 import slider3 from "../../assets/Industries/PackageUnit.webp";
@@ -26,11 +29,6 @@ import bgslider from "../../assets/home/bg-slider.webp";
 
 export const Banner = () => {
   const heroData = {
-    hero: {
-      heading: ["Crafted by Aerodynamics. Powered by Technology"],
-      description: "With cutting-edge technology and a commitment to quality.",
-      buttonText: "Know More",
-    },
     about: {
       tag: "About Fanwings",
       title: "Driving the Future of Airflow Innovation",
@@ -39,46 +37,47 @@ export const Banner = () => {
       readMore: "Read More",
     },
   };
+  const slides = [
+    {
+      id: 1,
+      img: Banner1,
+    },
+    {
+      id: 2,
+      img: Banner2,
+    },
+    {
+      id: 3,
+      img: Banner3,
+    },
+  ];
 
-  const { hero, about } = heroData;
+  const { about } = heroData;
   return (
     <>
       <div>
-        <section
-          className=" relative text-white bg-no-repeat bg-cover bg-bottom py-24 pt-14 md:pt-20 md:py-20"
-          style={{ backgroundImage: `url(${banner})` }}
-        >
-          <div className="max-w-7xl mx-auto px-6 md:py-10 md:pb-28 grid md:grid-cols-5 items-center z-10 relative">
-            <div className="col-span-1 md:col-span-2">
-              <h1 className="text-3xl md:text-5xl font-medium leading-snug mb-6">
-                {hero.heading.map((line, i) => (
-                  <div key={i}>{line}</div>
-                ))}
-              </h1>
-              <p className="mb-10 text-base font-light text-white opacity-80 md:text-lg">
-                {hero.description}
-              </p>
-              {/* <button className="bg-[#1FA54D] hover:bg-white text-white py-3 md:py-4 px-6 md:px-10 rounded-full flex items-center gap-4 hover:text-[#1FA54D]">
-                                {hero.buttonText}
-                                <BsArrowRightCircle className='text-xl' />
-
-                            </button> */}
-            </div>
-          </div>
-
-          {/* <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] rotate-180">
-                        <svg
-                            className="relative block w-[calc(100%+1.3px)] h-[100px]"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 1200 120"
-                            preserveAspectRatio="none"
-                        >
-                            <path
-                                d="M321.39 56.36C213.18 96.71 109.74 111.75 0 103.33V0h1200v103.33c-110.71 8.42-221.39-9.71-331.15-31.94C747.74 49.86 642.08 19.99 531.45 25.73c-109.42 5.67-218.39 50.89-321.39 30.63z"
-                                fill="#fff"
-                            ></path>
-                        </svg>
-                    </div> */}
+        <section className="relative">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            autoplay={{ delay: 5000 }}
+            loop
+            pagination={{ clickable: true }}
+            className="w-full h-[80vh]"
+          >
+            {slides.map((slide, idx) => (
+              <SwiperSlide key={idx}>
+                <div className="relative h-[80vh] w-full">
+                  <img
+                    src={slide.img}
+                    alt="Slide"
+                    fill
+                    className="object-cover"
+                    priority={idx === 0}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </section>
 
         <section className="bg-white py-12 px-6 max-w-7xl mx-auto grid md:grid-cols-12 gap-12 md:gap-20 items-center">
