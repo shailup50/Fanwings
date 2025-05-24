@@ -17,7 +17,7 @@ import BusFan from "../../assets/products/Buses.webp";
 import BusBlower from "../../assets/products/BusBlower.webp";
 import InlineFan from "../../assets/home/Inline-Fan.webp";
 import BoxType from "../../assets/products/BoxType.webp";
-import TrainMotor from "../../assets/home/TrainBlower.webp";
+import TrainMotor from "../../assets/products/Railways.webp";
 import BackwardAxial from "../../assets/products/BackwardCentrifugal.webp";
 import ForwardCurveFan from "../../assets/home/ForwardCurveFan.webp";
 import ForwardDual from "../../assets/products/ForwardDual.webp";
@@ -25,6 +25,7 @@ import ForwardSingle from "../../assets/products/ForwardSingle.webp";
 import ECBLDCMotor from "../../assets/products/ECBLDCMotor.webp";
 import icon from "../../assets/Industries/Fanwings_icon.svg";
 import bgcontact from "../../assets/home/bg-product.webp";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 export const Feature = () => {
   const products = [
@@ -254,6 +255,65 @@ export const Feature = () => {
 export const Product = () => {
   const productData = [
     {
+      title: "Axial Fan",
+      subcontent: [
+        {
+          Subcontenttitle: "Internal Rotor(AC, EC, DC)",
+          Subcontentspec: [
+            "Voltage:  115, 230, 415V",
+            "Size: 133mm~400mm",
+            "Applications: Railways, Metro, RRTS.",
+          ],
+        },
+        {
+          Subcontenttitle: "External Rotor (AC,EC)",
+          Subcontentspec: [
+            "Voltage:12,24,48,115,230,415V",
+            "Size: 200mm-910mm",
+            "Applications: Cold room, Condensing unit,Refrigeration, Ventilation etc. ",
+          ],
+        },
+      ],
+      image: productimg3,
+      image2: true,
+
+      imageTwo: productimg4,
+    },
+    {
+      title: "Backward Curved Centrifugal Fan",
+      specs: [
+        "AC/EC/DC",
+        "Voltage: 12,24,48,115, 230,415V",
+        "Size:133mm~630mm",
+        "Applications: Data center, AHU,Panel airconditioner, Telecom",
+      ],
+      image: BackwardAxial,
+    },
+    {
+      title: "Forward Curved Centrifugal",
+      image: ForwardSingle,
+      image2: true,
+      imageTwo: ForwardDual,
+      subcontent: [
+        {
+          Subcontenttitle: "Single Inlet (AC/EC)",
+          Subcontentspec: [
+            "Voltage: 230,415V",
+            "Size:120mm~280mm",
+            "Applications: Airconditioners, Control panel, Force cooling applications etc.",
+          ],
+        },
+        {
+          Subcontenttitle: " Dual Inlet (AC/EC)",
+          Subcontentspec: [
+            "Voltage: 230,415V",
+            "Size:120mm~400mm",
+            "Applications: Airconditioners, Control panel, Railways,  Force cooling etc",
+          ],
+        },
+      ],
+    },
+    {
       title: "Compact Fan",
       specs: [
         "AC/EC/DC",
@@ -262,6 +322,11 @@ export const Product = () => {
         "Applications: UPS, Inverters, Electric Vehicles & chargers etc.",
       ],
       image: productimg1,
+    },
+    {
+      title: "Box Type Fan",
+      specs: ["For domestic Refrigerators"],
+      image: BoxType,
     },
     {
       title: "Shaded Pole Motor",
@@ -283,84 +348,53 @@ export const Product = () => {
       ],
       image: ECBLDCMotor,
     },
+
     {
-      title: "Axial Fan Internal Rotor (AC, EC, DC)",
-      specs: [
-        "Voltage: 230,415V",
-        "Size:450mm~900mm",
-        "Applications: Air-cooled Chillers, Heat pumps, Blast freezers,Packaged/Ductable Airconditioner etc",
-      ],
-      image: productimg4,
-    },
-    {
-      title: "Axial Fan External Rotor (AC,EC)",
-      specs: [
-        "Voltage:12,24,48,115,230,415V",
-        "Size: 200mm-910mm",
-        "Applications: Cold room, Condensing unit,Refrigeration, Ventilation etc. ",
-      ],
-      image: productimg3,
-    },
-    {
-      title: "Backward Curved Centrifugal Fan",
-      specs: [
-        "AC/EC/DC",
-        "Voltage: 12,24,48,115, 230,415V",
-        "Size:133mm~630mm",
-        "Applications: Data center, AHU,Panel airconditioner, Telecom",
-      ],
-      image: BackwardAxial,
-    },
-    {
-      title: "Forward Curved Centrifugal Dual Inlet (AC/EC)",
-      specs: [
-        "Voltage: 230,415V",
-        "Size:120mm~400mm",
-        "Applications: Airconditioners, Control panel, Railways,  Force cooling etc",
-      ],
-      image: ForwardDual,
-    },
-    {
-      title: "Forward Curved Centrifugal Single Inlet (AC/EC)",
-      specs: [
-        "Voltage: 230,415V",
-        "Size:120mm~280mm",
-        "Applications: Airconditioners, Control panel, Force cooling applications etc.",
-      ],
-      image: ForwardSingle,
-    },
-    {
-      title: "Bus Blowers (DC)",
-      specs: [
-        "Voltage: 12,24V",
-        "Size: 97mm,100mm etc",
-        "Applications: Buses, BTMS, Truck refrigerator, Radiator cooling, EV tractors ",
-      ],
+      title: "Buses",
       image: BusBlower,
-    },
-    {
-      title: "Bus Fan (DC)",
-      specs: [
-        "Voltage:  12, 24V",
-        "Size: 200mm~385mm",
-        "Applications: Buses, BTMS, Truck refrigerator, Radiator cooling, EV tractors ",
+      image2: true,
+      imageTwo: BusFan,
+      subcontent: [
+        {
+          Subcontenttitle: "Bus Blowers (DC)",
+          Subcontentspec: [
+            "Voltage: 12,24V",
+            "Size: 97mm,100mm etc",
+            "Applications: Buses, BTMS, Truck refrigerator, Radiator cooling, EV tractors ",
+          ],
+        },
+        {
+          Subcontenttitle: "Bus Fan (DC)",
+          Subcontentspec: [
+            "Voltage:  12, 24V",
+            "Size: 200mm~385mm",
+            "Applications: Buses, BTMS, Truck refrigerator, Radiator cooling, EV tractors ",
+          ],
+        },
       ],
-      image: BusFan,
     },
     {
-      title: "Box Type Fan",
-      specs: ["For domestic Refrigerators"],
-      image: BoxType,
-    },
-    {
-      title: "Railways : Fan and Blower",
-      specs: [
-        "Voltage:  115, 230, 415V",
-        "Size Fan (AC/DC): 133mm~400mm",
-        "Size Blowers (AC/DC): 500mm~630mm",
-        "Applications: Railways, Metro, RRTS.",
+      title: "Railways",
+      subcontent: [
+        {
+          Subcontenttitle: "Fans",
+          Subcontentspec: [
+            "Voltage:  115, 230, 415V",
+            "Size: 133mm~400mm",
+            "Applications: Railways, Metro, RRTS.",
+          ],
+        },
+        {
+          Subcontenttitle: "Blower",
+          Subcontentspec: [
+            "Voltage:  115, 230, 415V",
+            "Size: 500mm~630mm",
+            "Applications: Railways, Metro, RRTS.",
+          ],
+        },
       ],
       image: TrainMotor,
+      image2: false,
     },
     {
       title: "Inline Fans",
@@ -398,7 +432,7 @@ export const Product = () => {
 
   return (
     <div
-      className="relative text-black bg-no-repeat bg-white pb-4 mt-2 overflow-hidden"
+      className="relative text-black bg-no-repeat bg-white px-3 pb-4 mt-1 overflow-hidden"
       // style={{ backgroundImage: `url(${bgcontact})` }}
     >
       <div className="grid grid-cols-1 items-center gap-4 max-w-7xl mx-auto px-6">
@@ -410,31 +444,75 @@ export const Product = () => {
         >
           {productData.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <div className="grid grid-cols-1  lg:grid-cols-12 items-center gap-8 mt-18 md:mt-0">
+              <div
+                className={`grid grid-cols-1  lg:grid-cols-12 items-center gap-2 mt-5 md:mt-0 ${
+                  item.subcontent ? "mb-[3rem]" : "mb-1"
+                }`}
+              >
                 {/* Text Content */}
                 <div className="lg:col-span-7 space-y-4 order-2 lg:order-1 md:w-[88%]">
                   <div className="md:order-1 order-2 flex items-center gap-5 mb-2 font-light">
                     <img src={icon} alt="icon" height={35} width={35} />
                     <span>Product Series</span>
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-normal py-2">
+                  <h2 className="text-2xl md:text-3xl font-normal ">
                     {item.title}
                   </h2>
+                  {item.subcontent ? (
+                    <div
+                      className={`${
+                        !item.image2
+                          ? "flex md:flex-row flex-col md:gap-1 gap-4"
+                          : "space-y-4"
+                      }`}
+                    >
+                      {item.subcontent.map((sub, i) => (
+                        <div
+                          key={i}
+                          className={`${
+                            !item.image2 ? "w-full md:w-1/2" : "w-full"
+                          }`}
+                        >
+                          <div className="flex items-center">
+                            <span className="text-[#052B98] mt-1 text-xl">
+                              <FaArrowAltCircleRight />
+                            </span>
+                            <h2 className="text-xl px-2 md:text-2xl font-normal py-2">
+                              {sub.Subcontenttitle}
+                            </h2>
+                          </div>
 
-                  <ul className="text-sm md:text-[15px] space-y-1 mb-2">
-                    {item.specs?.map((spec, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start font-light mb-2 gap-2"
-                      >
-                        <span className="text-[#052B98] mt-1">
-                          <IoMdSettings />
-                        </span>
-                        {spec}
-                      </li>
-                    ))}
-                  </ul>
-
+                          <ul className="text-sm md:text-[14px] space-y-1 mb-2">
+                            {sub.Subcontentspec?.map((spec, j) => (
+                              <li
+                                key={j}
+                                className="flex items-start font-light mb-2 gap-2"
+                              >
+                                <span className="text-[#052B98] mt-1">
+                                  <IoMdSettings />
+                                </span>
+                                {spec}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <ul className="text-sm md:text-[15px] space-y-1 mb-2">
+                      {item.specs?.map((spec, i) => (
+                        <li
+                          key={i}
+                          className="flex items-start font-light mb-2 gap-2"
+                        >
+                          <span className="text-[#052B98] mt-1">
+                            <IoMdSettings />
+                          </span>
+                          {spec}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <div className="flex flex-wrap gap-3 pt-1">
                     {item.buttons?.map((btn, i) => (
                       <button
@@ -449,13 +527,22 @@ export const Product = () => {
                 </div>
 
                 {/* Image */}
-                <div className="lg:col-span-5 order-2 ">
+                <div className="lg:col-span-3 order-2 ">
                   <div className="flex justify-center">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full max-h-[400px] object-contain"
+                      className={`w-full ${
+                        item.image2 ? " max-h-[400px]" : "max-h-[400px] "
+                      } object-contain`}
                     />
+                    {item.image2 ? (
+                      <img
+                        src={item.imageTwo}
+                        alt={item.title}
+                        className="w-full max-h-[400px] object-contain"
+                      />
+                    ) : null}
                   </div>
                 </div>
               </div>
@@ -463,7 +550,7 @@ export const Product = () => {
           ))}
         </Swiper>
 
-        <div className="absolute left-[75%] md:left-32 bottom-7 flex gap-3 z-10">
+        <div className="absolute left-[35%] md:left-32 bottom-7 flex gap-3 z-10">
           <button
             ref={prevRef}
             className={`p-2 rounded-full ${
