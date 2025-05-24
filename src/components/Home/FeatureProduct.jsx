@@ -432,7 +432,7 @@ export const Product = () => {
 
   return (
     <div
-      className="relative text-black bg-no-repeat bg-white px-3 pb-4 mt-1 overflow-hidden"
+      className="relative text-black  bg-no-repeat bg-white px-3 pb-4 mt-1 overflow-hidden"
       // style={{ backgroundImage: `url(${bgcontact})` }}
     >
       <div className="grid grid-cols-1 items-center gap-4 max-w-7xl mx-auto px-6">
@@ -528,19 +528,19 @@ export const Product = () => {
 
                 {/* Image */}
                 <div className="lg:col-span-3 order-2 ">
-                  <div className="flex justify-center">
+                  <div className="flex md:flex-row flex-col justify-center">
                     <img
                       src={item.image}
                       alt={item.title}
                       className={`w-full ${
-                        item.image2 ? " max-h-[400px]" : "max-h-[400px] "
+                        item.image2 ? " max-h-[300px]" : "max-h-[400px] "
                       } object-contain`}
                     />
                     {item.image2 ? (
                       <img
                         src={item.imageTwo}
                         alt={item.title}
-                        className="w-full max-h-[400px] object-contain"
+                        className="w-full max-h-[300px] object-contain"
                       />
                     ) : null}
                   </div>
