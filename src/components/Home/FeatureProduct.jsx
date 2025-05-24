@@ -11,14 +11,18 @@ import { IoMdSettings } from "react-icons/io";
 
 import productimg1 from "../../assets/products/CompactFan.webp";
 import productimg2 from "../../assets/products/ShadedPoleMotor.webp";
-import productimg3 from "../../assets/products/AxialFan.webp";
-import productimg4 from "../../assets/products/BackwardCurve.webp";
-import BusMotor from "../../assets/products/Buses.webp";
+import productimg3 from "../../assets/products/ExternalAxialFan.webp";
+import productimg4 from "../../assets/products/IneternalAxial.webp";
+import BusFan from "../../assets/products/Buses.webp";
+import BusBlower from "../../assets/products/BusBlower.webp";
 import InlineFan from "../../assets/home/Inline-Fan.webp";
-import BoxType from "../../assets/home/BoxType.webp";
+import BoxType from "../../assets/products/BoxType.webp";
 import TrainMotor from "../../assets/home/TrainBlower.webp";
-import BackwardAxial from "../../assets/products/ForwardCurve.webp";
+import BackwardAxial from "../../assets/products/BackwardCentrifugal.webp";
 import ForwardCurveFan from "../../assets/home/ForwardCurveFan.webp";
+import ForwardDual from "../../assets/products/ForwardDual.webp";
+import ForwardSingle from "../../assets/products/ForwardSingle.webp";
+import ECBLDCMotor from "../../assets/products/ECBLDCMotor.webp";
 import icon from "../../assets/Industries/Fanwings_icon.svg";
 import bgcontact from "../../assets/home/bg-product.webp";
 
@@ -252,98 +256,119 @@ export const Product = () => {
     {
       title: "Compact Fan",
       specs: [
-        "Compact Fans - AC/ DC / EC",
-        "Voltage: 12,24,48,115,230,415 V",
-        "Size: 20x20 mm to 280x280 mm",
-        "Application: UPS, Inverters, Electric Vehicles & Chargers",
+        "AC/EC/DC",
+        "Voltage: 12,24,48,115, 230,415V",
+        "Size:20mm~280mm",
+        "Applications: UPS, Inverters, Electric Vehicles & chargers etc.",
       ],
       image: productimg1,
     },
     {
       title: "Shaded Pole Motor",
       specs: [
-        "Shaded Pole Motors - Q Type, C Frame",
-        "Elevator Cabin fans",
-        "EC Motors",
-        "Voltage: 115, 230V",
-        "Range: 5W to 34W",
-        "Application: Water coolers, Visi coolers, Elevators",
+        "AC/EC",
+        "Voltage: 230V",
+        "Size: 5W, 10W, 16W, 18W, 25W,34W",
+        "Applications: Visi coolers, Condensing unit, Wine Coolers etc.",
       ],
       image: productimg2,
     },
     {
-      title: "Axial Fan",
+      title: "EC/BLDC Motor",
       specs: [
-        "Large Axial Fans – Suction/Blow",
-        "Voltage: 115,230,415VAC",
-        "Size: 200 to 910 mm",
-        "Application: Commercial refrigeration, Chiller, Cold Room",
+        "AC/EC/DC",
+        "Voltage:  230, 330, 415V",
+        "Size:250mm~3200mm",
+        "Applications: Railways, VRV, Chillers, Heat Pump.",
+      ],
+      image: ECBLDCMotor,
+    },
+    {
+      title: "Axial Fan Internal Rotor (AC, EC, DC)",
+      specs: [
+        "Voltage: 230,415V",
+        "Size:450mm~900mm",
+        "Applications: Air-cooled Chillers, Heat pumps, Blast freezers,Packaged/Ductable Airconditioner etc",
+      ],
+      image: productimg4,
+    },
+    {
+      title: "Axial Fan External Rotor (AC,EC)",
+      specs: [
+        "Voltage:12,24,48,115,230,415V",
+        "Size: 200mm-910mm",
+        "Applications: Cold room, Condensing unit,Refrigeration, Ventilation etc. ",
       ],
       image: productimg3,
     },
     {
       title: "Backward Curved Centrifugal Fan",
       specs: [
-        "Designed with blades that curve opposite to the direction of rotation.",
-        "Known for high efficiency and low noise operation.",
-        "Ideal for medium to high-pressure applications like HVAC systems.",
-        "Application: Data center, AHU, FFU",
-        "Self-cleaning design reduces dust buildup on blades.",
-        "Offer stable airflow and reduced risk of overloading the motor.",
+        "AC/EC/DC",
+        "Voltage: 12,24,48,115, 230,415V",
+        "Size:133mm~630mm",
+        "Applications: Data center, AHU,Panel airconditioner, Telecom",
       ],
       image: BackwardAxial,
     },
     {
-      title: "Forward Curved Centrifugal",
+      title: "Forward Curved Centrifugal Dual Inlet (AC/EC)",
       specs: [
-        "Single-phase: 220V / 240V",
-        "Three-phase: 380V / 400V",
-        "Frequency: 50 Hz / 60 Hz",
-        "Motor Power Range: 0.05 kW to 15 kW",
-        "Width: 75 mm to 500+ mm",
+        "Voltage: 230,415V",
+        "Size:120mm~400mm",
+        "Applications: Airconditioners, Control panel, Railways,  Force cooling etc",
       ],
-      image: ForwardCurveFan,
+      image: ForwardDual,
     },
     {
-      title: "Buses : Fan and Blower",
+      title: "Forward Curved Centrifugal Single Inlet (AC/EC)",
       specs: [
-        "Compact and space-saving.",
-        "Low power consumption",
-        "Quiet and smooth operation",
-        "Quick cabin cooling.",
+        "Voltage: 230,415V",
+        "Size:120mm~280mm",
+        "Applications: Airconditioners, Control panel, Force cooling applications etc.",
       ],
-      image: BusMotor,
+      image: ForwardSingle,
+    },
+    {
+      title: "Bus Blowers (DC)",
+      specs: [
+        "Voltage: 12,24V",
+        "Size: 97mm,100mm etc",
+        "Applications: Buses, BTMS, Truck refrigerator, Radiator cooling, EV tractors ",
+      ],
+      image: BusBlower,
+    },
+    {
+      title: "Bus Fan (DC)",
+      specs: [
+        "Voltage:  12, 24V",
+        "Size: 200mm~385mm",
+        "Applications: Buses, BTMS, Truck refrigerator, Radiator cooling, EV tractors ",
+      ],
+      image: BusFan,
     },
     {
       title: "Box Type Fan",
-      specs: [
-        "Commonly used in refrigeration and ventilation systems.",
-        "Protects internal components from dust, debris, and damage.",
-        "Offers efficient cooling in confined or targeted areas.",
-        "Easy to install and maintain",
-        "Suitable for industrial and commercial use.",
-      ],
+      specs: ["For domestic Refrigerators"],
       image: BoxType,
     },
     {
       title: "Railways : Fan and Blower",
       specs: [
-        "Built for long-lasting performance",
-        "Delivers steady and strong airflow.",
-        "Withstands high vibrations.",
-        "Protected against overheating.",
+        "Voltage:  115, 230, 415V",
+        "Size Fan (AC/DC): 133mm~400mm",
+        "Size Blowers (AC/DC): 500mm~630mm",
+        "Applications: Railways, Metro, RRTS.",
       ],
       image: TrainMotor,
     },
     {
       title: "Inline Fans",
       specs: [
-        "Designed to fit within ductwork.",
-        "Offering efficient airflow without taking up extra space",
-        "Commonly used in HVAC systems for ventilation and cooling.",
-        "Provide consistent airflow",
-        "Quieter compared to other fan types",
-        "Suitable for long duct runs",
+        "AC/EC",
+        "Voltage:   230, 415V",
+        "Size: 100mm~315mm",
+        "Applications : basement ventilation, toilet exhaust etc.",
       ],
       image: InlineFan,
     },
