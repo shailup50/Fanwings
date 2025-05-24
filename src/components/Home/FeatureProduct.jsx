@@ -433,10 +433,7 @@ export const Product = () => {
   };
 
   return (
-    <div
-      className="relative text-black  bg-no-repeat bg-white px-3 pb-4 mt-1 overflow-hidden"
-      // style={{ backgroundImage: `url(${bgcontact})` }}
-    >
+    <div className="relative text-black h-[800px] md:h-full">
       <div className="grid grid-cols-1 items-center gap-4 max-w-7xl mx-auto px-6">
         <Swiper
           modules={[Navigation, Autoplay]}
@@ -536,14 +533,16 @@ export const Product = () => {
                       src={item.image}
                       alt={item.title}
                       className={`w-full ${
-                        item.image2 ? " max-h-[300px]" : "max-h-[400px] "
+                        item.image2
+                          ? " h-[150px] md:max-h-[300px]"
+                          : "max-h-[400px] "
                       } object-contain`}
                     />
                     {item.image2 ? (
                       <img
                         src={item.imageTwo}
                         alt={item.title}
-                        className="w-full max-h-[300px] object-contain"
+                        className="w-full h-[150px] md:max-h-[300px] object-contain"
                       />
                     ) : null}
                   </div>
@@ -553,7 +552,7 @@ export const Product = () => {
           ))}
         </Swiper>
 
-        <div className="hidden md:flex absolute left-[35%] md:left-32 bottom-7  gap-3 z-10">
+        <div className="flex absolute left-[35%] md:left-32 bottom-7  gap-3 z-10">
           <button
             ref={prevRef}
             className={`p-2 rounded-full ${
