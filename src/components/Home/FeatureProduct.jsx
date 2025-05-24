@@ -1,9 +1,11 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
+
 import { IoArrowForwardCircleSharp } from "react-icons/io5";
 import { IoMdArrowDropright } from "react-icons/io";
 import { GoChevronRight, GoChevronLeft } from "react-icons/go";
@@ -437,7 +439,8 @@ export const Product = () => {
     >
       <div className="grid grid-cols-1 items-center gap-4 max-w-7xl mx-auto px-6">
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
+          autoplay={{ delay: 3000, disableOnInteraction: false }} // ← ADD THIS
           onSwiper={setSwiperInstance}
           onSlideChange={handleSlideChange}
           className="w-full"
@@ -550,7 +553,7 @@ export const Product = () => {
           ))}
         </Swiper>
 
-        <div className="absolute left-[35%] md:left-32 bottom-7 flex gap-3 z-10">
+        <div className="hidden md:flex absolute left-[35%] md:left-32 bottom-7  gap-3 z-10">
           <button
             ref={prevRef}
             className={`p-2 rounded-full ${
