@@ -534,17 +534,18 @@ export const Product = () => {
                       alt={item.title}
                       className={`w-full ${
                         item.image2
-                          ? " h-[150px] md:max-h-[300px]"
-                          : "max-h-[400px] "
+                          ? "max-h-[150px] md:max-h-[350px]"
+                          : "max-h-[400px]"
                       } object-contain`}
                     />
-                    {item.image2 ? (
+
+                    {item.image2 && (
                       <img
                         src={item.imageTwo}
                         alt={item.title}
-                        className="w-full h-[150px] md:max-h-[300px] object-contain"
+                        className="w-full max-h-[150px] md:max-h-[500px] object-contain"
                       />
-                    ) : null}
+                    )}
                   </div>
                 </div>
               </div>
