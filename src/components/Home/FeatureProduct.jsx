@@ -379,7 +379,7 @@ export const Product = () => {
       title: "Railways",
       subcontent: [
         {
-          Subcontenttitle: "Fans",
+          Subcontenttitle: "Blower",
           Subcontentspec: [
             "Voltage:  115, 230, 415V",
             "Size: 133mm~400mm",
@@ -387,7 +387,7 @@ export const Product = () => {
           ],
         },
         {
-          Subcontenttitle: "Blower",
+          Subcontenttitle: "Fans",
           Subcontentspec: [
             "Voltage:  115, 230, 415V",
             "Size: 500mm~630mm",
