@@ -262,9 +262,9 @@ export const Product = () => {
         {
           Subcontenttitle: "Internal Rotor(AC, EC, DC)",
           Subcontentspec: [
-            "Voltage:  115, 230, 415V",
-            "Size: 133mm~400mm",
-            "Applications: Railways, Metro, RRTS.",
+            "Voltage: 230,415V",
+            "Size:450mm~900mm",
+            "Applications: Air-cooled Chillers, Heat pumps, Blast freezers, Packaged/Ductable Airconditioner etc.",
           ],
         },
         {
@@ -437,7 +437,7 @@ export const Product = () => {
       <div className="grid grid-cols-1 items-center gap-4 max-w-7xl mx-auto px-6">
         <Swiper
           modules={[Navigation, Autoplay]}
-          autoplay={{ delay: 3000, disableOnInteraction: false }} // ← ADD THIS
+          autoplay={{ delay: 8000, disableOnInteraction: false }} // ← ADD THIS
           onSwiper={setSwiperInstance}
           onSlideChange={handleSlideChange}
           className="w-full"
@@ -528,7 +528,7 @@ export const Product = () => {
 
                 {/* Image */}
                 <div className="lg:col-span-3 order-2 ">
-                  <div className="flex md:flex-row flex-col justify-center">
+                  <div className="flex md:flex-row flex-col justify-center items-center">
                     <img
                       src={item.image}
                       alt={item.title}
