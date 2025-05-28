@@ -10,6 +10,7 @@ export const Contact = () => {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue gravida facilisis diam viverra. Porttitor vel et nisl, imperdiet tincidunt ornare fermentum tortor. Condimentum auctor nec in nulla pellentesque erat scelerisque commodo, accumsan. Nibh neque tellus et aliquet. Sagittis porttitor ullamcorper eget phasellus. Eleifend placerat amet velit tortor ac egestas. Massa quis sed in penatibus diam tellus.",
     contact: [
       {
+        labeltwo: "Fanwings Airengineers Pvt. Ltd. ",
         label: "Contact Number",
         value: "+91-7017487891",
       },
@@ -54,6 +55,11 @@ export const Contact = () => {
           <div className=" text-white grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x">
             {contact.map((item, i) => (
               <div key={i} className="px-6 py-6 text-center space-y-2">
+                {item.labeltwo ? (
+                  <p className="uppercase text-[15px] font-light text-white">
+                    {item.labeltwo}
+                  </p>
+                ) : null}
                 <p className="uppercase text-[15px] font-light text-white">
                   {item.label}
                 </p>
