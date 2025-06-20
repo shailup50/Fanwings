@@ -453,9 +453,9 @@ export const Product = () => {
                 <div className="lg:col-span-7 space-y-4 order-2 lg:order-1 md:w-[88%]">
                   <div className="md:order-1 order-2 flex items-center gap-5 mb-2 font-light">
                     <img src={icon} alt="icon" height={35} width={35} />
-                    <span>Product Series</span>
+                    <span className="text-2xl md:text-3xl">Product Series</span>
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-normal ">
+                  <h2 className="text-lg md:text-xl font-normal ">
                     {item.title}
                   </h2>
                   {item.subcontent ? (
@@ -477,7 +477,7 @@ export const Product = () => {
                             <span className="text-[#052B98] mt-1 text-xl">
                               <FaArrowAltCircleRight />
                             </span>
-                            <h2 className="text-xl px-2 md:text-2xl font-normal py-2">
+                            <h2 className="text-md px-2 md:text-lg font-normal py-2">
                               {sub.Subcontenttitle}
                             </h2>
                           </div>

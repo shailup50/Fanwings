@@ -11,7 +11,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 // import banner from "../../assets/home/banner.webp";
 import banner from "../../assets/home/fanwings-banner.webp";
-import Banner1 from "../../assets/home/Banner1.webp";
+import Banner1 from "../../assets/home/HeroImage.webp";
 import Banner2 from "../../assets/home/Banner2.webp";
 import Banner3 from "../../assets/home/Banner3.webp";
 import slider1 from "../../assets/Industries/FanCoilUnit.webp";
@@ -42,14 +42,14 @@ export const Banner = () => {
       id: 1,
       img: Banner1,
     },
-    {
-      id: 2,
-      img: Banner2,
-    },
-    {
-      id: 3,
-      img: Banner3,
-    },
+    // {
+    //   id: 2,
+    //   img: Banner2,
+    // },
+    // {
+    //   id: 3,
+    //   img: Banner3,
+    // },
   ];
 
   const { about } = heroData;
@@ -237,10 +237,10 @@ export const Slider = () => {
               <SwiperSlide key={index}>
                 <div className="flex flex-col md:flex-row items-center text-white  relative">
                   <div className="py-12 pb-40 md:py-24  w-full md:w-1/2 order-2 md:order-1">
-                    <h4 className="text-sm mb-4 -mt-8 md:mt-0">
+                    <h4 className="text-2xl md:text-3xl mb-4 -mt-8 md:mt-0">
                       {item.subtitle}
                     </h4>
-                    <h2 className="text-2xl md:text-3xl mb-4">{item.title}</h2>
+                    <h2 className="text-lg md:text-xl mb-4">{item.title}</h2>
                     <p
                       className="mb-6 md:mb-10 text-sm font-light md:text-base"
                       dangerouslySetInnerHTML={{ __html: item.description }}
