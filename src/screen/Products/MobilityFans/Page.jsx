@@ -8,7 +8,7 @@ import icon3 from "../../../assets/mobility/icon3.svg"
 import adimg from "../../../assets/mobility/adimg.webp"
 import TechnologySection from '../../../components/Mobility/TechnologySection'
 import AppInfo from '../../../components/Mobility/AppInfo'
-import info1 from "../../../assets/Mobility/application.webp"
+import info1 from "../../../assets/mobility/application.webp"
 import { FaCheck } from "react-icons/fa6";
 import key1 from "../../../assets/mobility/key1.svg"
 import key2 from "../../../assets/mobility/key2.svg"
