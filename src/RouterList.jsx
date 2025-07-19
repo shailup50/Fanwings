@@ -8,7 +8,7 @@ import {
     BrowserRouter,
 } from "react-router-dom";
 
-import Footer from './components/Footer/Footer.jsx';
+import Footer from './components/Footer/Page.jsx';
 import Home from './screen/Home/Home.jsx';
 import Support from './screen/Support/Support.jsx';
 import Header from './components/Header/Header.jsx';
