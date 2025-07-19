@@ -14,7 +14,7 @@ import Support from './screen/Support/Support.jsx';
 import Header from './components/Header/Header.jsx';
 
 import AxialFans from './screen/Products/AxialFans/AxialFans.jsx';
-import MobilityFans from './screen/Products/MobilityFans/mobilityFans.jsx';
+import MobilityFans from './screen/Products/MobilityFans/Page.jsx';
 import DoubleInletCentrifugalFans from './screen/Products/DoubleInletCentrifugalFans/DoubleInletCentrifugalFans.jsx';
 function RouterList() {
     return (
@@ -27,10 +27,6 @@ function RouterList() {
                     <Route path='/products/axial-fans' element={<AxialFans />} />
                     <Route path='/products/mobility-fans' element={<MobilityFans />} />
                     <Route path='/products/forward-curves-centrifugal-fan/double-inlet-centrifugal-fans' element={<DoubleInletCentrifugalFans />} />
-
-
-
-
                 </Routes>
                 <Footer />
             </BrowserRouter>
