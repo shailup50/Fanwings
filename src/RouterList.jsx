@@ -24,9 +24,9 @@ function RouterList() {
                 <Routes>
                     <Route  path="/" element={<Home />} />
                     <Route path="/support" element={<Support />} />
-                    <Route exact path='products/axial-fans' element={<AxialFans />} />
-                    <Route exact path='products/mobility-fans' element={<MobilityFans />} />
-                    <Route exact path='products/forward-curves-centrifugal-fan/double-inlet-centrifugal-fans' element={<DoubleInletCentrifugalFans />} />
+                    <Route  path='/products/axial-fans' element={<AxialFans />} />
+                    <Route  path='/products/mobility-fans' element={<MobilityFans />} />
+                    <Route  path='/products/forward-curves-centrifugal-fan/double-inlet-centrifugal-fans' element={<DoubleInletCentrifugalFans />} />
                 </Routes>
                 <Footer />
             </BrowserRouter>
