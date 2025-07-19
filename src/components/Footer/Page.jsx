@@ -7,7 +7,7 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import { IoIosHome } from "react-icons/io";
-import { Contact, Form } from "../Home/contactForm";
+import { Contact, Form } from "../Home/ContactForm";
 
 const iconMap = {
   FaFacebookF: <FaFacebookF />,
