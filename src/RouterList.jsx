@@ -26,7 +26,6 @@ function RouterList() {
                     <Route path="/support" element={<Support />} />
                     <Route path='/products/axial-fans' element={<AxialFans />} />
                     <Route path='/products/mobility-fans' element={<MobilityFans />} />
-                    <Route path='/products/mobility-fans' element={<MobilityFans />} />
                     <Route path='/products/forward-curves-centrifugal-fan/double-inlet-centrifugal-fans' element={<DoubleInletCentrifugalFans />} />
 
 
