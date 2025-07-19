@@ -7,6 +7,7 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import { IoIosHome } from "react-icons/io";
+import { Contact, Form } from "../Home/contactForm";
 
 const iconMap = {
   FaFacebookF: <FaFacebookF />,
@@ -45,6 +46,8 @@ function Footer() {
   };
   return (
     <>
+    <Contact/>
+    <Form/>
       <footer className="bg-black text-white text-sm">
         <div className="max-w-7xl mx-auto px-6 py-10 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* <div>
