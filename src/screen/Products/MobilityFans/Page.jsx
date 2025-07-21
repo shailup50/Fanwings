@@ -15,6 +15,9 @@ import key2 from "../../../assets/mobility/key2.svg"
 import key3 from "../../../assets/mobility/key3.svg"
 import key4 from "../../../assets/mobility/key4.svg"
 import key5 from "../../../assets/mobility/key5.svg"
+import buspdf from "../../../assets/mobility/Bus.pdf"
+import railwaypdf from "../../../assets/mobility/Railways.pdf"
+
 
 
 
@@ -26,11 +29,12 @@ function MobilityFans() {
     info: `Mobility fans are specially designed to provide efficient airflow in confined or dynamic environments where
     space, performance, and durability are critical. <br><br> These compact and lightweight fans are ideal for applications in mobile systems, transportation, and medical equipment, where consistent cooling and ventilation are
     essential for safe and reliable operation.`,
-    button1: "Bus Blower",
-    link1: "#",
-    button2: "Railway Blower",
-    link2: "#",
-    img: Banner
+    button1: "Bus",
+    link1: buspdf,
+    button2: "Railway",
+    link2: railwaypdf,
+    img: Banner,
+    targetvalue:true
   }
   const advantages = [
     {

@@ -28,7 +28,7 @@ function AxialFans() {
         link1: "#",
         button2: "External",
         link2: "#",
-        img: Banner
+        img: Banner,
     }
     const motorData = [
         {
