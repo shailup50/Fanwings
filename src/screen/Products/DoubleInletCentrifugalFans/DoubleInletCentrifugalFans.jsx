@@ -17,7 +17,8 @@ function DoubleInletCentrifugalFans() {
     const banner = {
         title: "Double inlet forward curved centrifugal fans",
         info: "Double inlet centrifugal fans are ideal when a strong, focused airflow, high static pressure, and a relatively large volume of air movement are required.",
-
+        button1: "Internal",
+        button2: "External",
         img: Banner
     }
     const advantagesData = [
