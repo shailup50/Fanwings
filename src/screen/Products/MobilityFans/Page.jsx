@@ -5,10 +5,10 @@ import { Advantage } from '../../../components/Mobility/Advantage'
 import icon1 from "../../../assets/mobility/icon1.svg"
 import icon2 from "../../../assets/mobility/icon2.svg"
 import icon3 from "../../../assets/mobility/icon3.svg"
-import adimg from "../../../assets/mobility/adimg.webp"
+import adimg from "../../../assets/mobility/advertisementImg.webp"
 import TechnologySection from '../../../components/Mobility/TechnologySection'
 import AppInfo from '../../../components/Mobility/AppInfo'
-import info1 from "../../../assets/mobility/application.webp"
+import info1 from "../../../assets/mobility/applicationImg.webp"
 import { FaCheck } from "react-icons/fa6";
 import key1 from "../../../assets/mobility/key1.svg"
 import key2 from "../../../assets/mobility/key2.svg"
@@ -17,6 +17,7 @@ import key4 from "../../../assets/mobility/key4.svg"
 import key5 from "../../../assets/mobility/key5.svg"
 import buspdf from "../../../assets/mobility/Bus.pdf"
 import railwaypdf from "../../../assets/mobility/Railways.pdf"
+import Banner1 from "../../../assets/mobility/Banner1.webp"
 
 
 
@@ -33,7 +34,7 @@ function MobilityFans() {
     link1: buspdf,
     button2: "Railway",
     link2: railwaypdf,
-    img: Banner,
+    img: Banner1,
     targetvalue:true
   }
   const advantages = [

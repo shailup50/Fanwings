@@ -17,12 +17,12 @@ import Externalpdf from "../../../assets/products/Externalpdf.pdf"
 
 function DoubleInletCentrifugalFans() {
     const banner = {
-        title: "Double inlet forward curved centrifugal fans",
+        title: "Forward curve centrifugal fans",
         info: "Double inlet centrifugal fans are ideal when a strong, focused airflow, high static pressure, and a relatively large volume of air movement are required.",
         button1: "Internal",
-        // link1: Internalpdf,
+        link1: Internalpdf,
         button2: "External",
-        // link2: Externalpdf,
+        link2: Externalpdf,
         img: Banner
     }
     const advantagesData = [
