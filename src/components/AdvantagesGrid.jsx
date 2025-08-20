@@ -51,7 +51,7 @@ const AdvantagesGrid = ({ items = [], heading, subheading }) => {
                             <h3 className="text-lg uppercase md:text-xl mb-4">{item.title}</h3>
                         )}
 
-                        <p className="text-[15px] text-abse text-white">{item.description}</p>
+                        <p className="text-[15px] text-abse text-white" dangerouslySetInnerHTML={{ __html: item.description }} />
 
                     </div>
                 ))}

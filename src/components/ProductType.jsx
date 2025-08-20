@@ -15,10 +15,10 @@ export const ProductType = ({ products = [] }) => {
                         </div>
                         <div className="  min-w-[60%] md:pl-6 text-center md:text-left">
                             <div className="inline-block">
-                            <h3 className="text-lg font-medium md:text-xl text-gray-800">{product.title}</h3>
-                            <div className="w-full h-[2px] bg-[#1FA54D] relative mt-3 mb-5">
-                                <span className="absolute -bottom-[6px] right-0 h-3 w-3 rounded-full bg-[#1FA54D]"></span>
-                            </div>
+                                <h3 className="text-lg font-medium md:text-xl text-gray-800">{product.title}</h3>
+                                <div className="w-full h-[2px] bg-[#1FA54D] relative mt-3 mb-5">
+                                    <span className="absolute -bottom-[6px] right-0 h-3 w-3 rounded-full bg-[#1FA54D]"></span>
+                                </div>
                             </div>
                             <p className="text-black text-[15px] md:text-base">{product.description}</p>
                         </div>

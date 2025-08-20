@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
-*{
-  --primary-font:"Poppins", sans-serif;
+* {
+  --primary-font: "Poppins", sans-serif;
 }
-html, body {
+
+html,
+body {
   font-family: var(--primary-font);
 }
 
@@ -12,29 +14,36 @@ html, body {
   position: absolute;
   bottom: 6rem;
 }
-.style2_slider .swiper-button-next:after, .style2_slider .swiper-button-prev:after{
+
+.style2_slider .swiper-button-next:after,
+.style2_slider .swiper-button-prev:after {
   font-size: 22px;
 }
-.middle_arrow{
+
+.middle_arrow {
   width: 80%;
   justify-content: center;
   margin-left: 10%;
   margin-top: 10px;
 
 }
-.white-pagination .swiper-pagination-bullet{
+
+.white-pagination .swiper-pagination-bullet {
   background: transparent;
   border: 1px solid #fff;
   opacity: 1;
 }
-.white-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+
+.white-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #fff;
 }
-.vertical_line{
+
+.vertical_line {
   position: relative;
 }
-.vertical_line::after{
-  content:  "";
+
+.vertical_line::after {
+  content: "";
   position: absolute;
   top: 3rem;
   left: 50%;
@@ -45,11 +54,20 @@ html, body {
   background: #fff;
 }
 
+.single_img .mb-4 {
+  min-width: 300px;
+}
+
+.single_img h3 {
+  font-size: 30px;
+}
+
 @media (max-width:767px) {
   .style2_slider {
     bottom: 7rem;
   }
-  .vertical_line::after{
+
+  .vertical_line::after {
     height: 100%;
     width: 3px;
     left: 2rem;
