@@ -8,6 +8,8 @@ import {
     BrowserRouter,
 } from "react-router-dom";
 
+//new view
+
 import Footer from './components/Footer/Page.jsx';
 import Home from './screen/Home/Home.jsx';
 import Support from './screen/Support/Support.jsx';
