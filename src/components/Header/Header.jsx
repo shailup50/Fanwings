@@ -23,7 +23,7 @@ const navigation = [
         ],
       },
       { name: "Compact Fan", href: "/products/compact-fan" },
-      { name: "Box Fan (For Refrigeration)", href: "#" },
+      { name: "Box Fan (For Refrigeration)", href: "/products/box-fan" },
     ],
   },
   {

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaCheck } from "react-icons/fa";
 
 export const GridBox = ({ data }) => {
     if (!data) return null;
@@ -59,9 +59,6 @@ export const GridBox = ({ data }) => {
     )
 }
 
-
-
-
 export const InfoSection = ({ title, itemsLeft = [], itemsRight = [] }) => {
     return (
         <>
@@ -89,7 +86,13 @@ export const InfoSection = ({ title, itemsLeft = [], itemsRight = [] }) => {
                                         <img src={item.icon} alt={item.title} className='w-12 object-contain' />
                                     </div>
                                 )}
-                                <p className="text-sm md:text-base">{item.text}</p>
+                                {item.heading && (
+                                    <p className="text-lg md:text-xl font-medium text-white max-w-4xl mx-auto mt-4 mb-2">
+                                        {item.heading}
+                                    </p>
+                                )}
+
+                                <p className="text-sm md:text-base font-light">{item.text}</p>
                             </div>
                         ))}
                     </div>
@@ -105,12 +108,133 @@ export const InfoSection = ({ title, itemsLeft = [], itemsRight = [] }) => {
 
                                     </div>
                                 )}
-                                <p className="text-sm md:text-base">{item.text}</p>
+                                {item.heading && (
+                                    <p className="text-lg md:text-xl font-medium text-white max-w-4xl mx-auto mt-4 mb-2">
+                                        {item.heading}
+                                    </p>
+                                )}
+                                <p className="text-sm md:text-base font-light">{item.text}</p>
                             </div>
                         ))}
 
 
 
+                    </div>
+                </div>
+            </section>
+        </>
+    )
+}
+
+
+
+export const FanCard = ({ image, title, description, points }) => {
+    return (
+        <>
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 p-6">
+
+                <div className="flex-shrink-0 w-full md:w-1/2">
+                    <img
+                        src={image}
+                        alt={title}
+                        className="w-full h-auto rounded-2xl object-cover"
+                    />
+                </div>
+
+
+                <div className="w-full md:w-1/2">
+                    <h2 className="text-2xl md:text-3xl  text-black uppercase font-medium mb-4 md:mb-8">{title}</h2>
+                    <p className="text-black mb-4" dangerouslySetInnerHTML={{ __html: description }} />
+                    <ul className="list-disc list-outside space-y-2 text-black ms-6">
+                        {points.map((point, index) => (
+                            <li key={index}>{point}</li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </>
+    )
+}
+
+
+
+export const BoxBenifits = ({
+    title,
+    description,
+    title2,
+    benefits,
+    footer,
+}) => {
+    return (
+        <>
+            <h2 className="text-2xl md:text-3xl font-medium text-black mb-6">{title}</h2>
+
+            <div className="bg-[#1FA54D] text-white rounded-md py-4 px-6 md:px-10 md:py-6 mb-10 max-w-4xl mx-auto">
+                <p className="text-sm md:text-base leading-relaxed">{description}</p>
+            </div>
+
+            <h3 className="text-2xl font-medium  mb-16 mt-12 text-black">
+                {title2}
+            </h3>
+
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-10 md:w-[95%] mx-auto">
+                {benefits.map((benefit, index) => (
+                    <div
+                        key={index}
+                        className="border-2 md:border-4 border-[#22A046] rounded-3xl md:rounded-4xl px-3 md:px-6 py-10 md:pt-16 relative flex flex-col items-center text-center justify-center "
+                    >
+                        {/* Check Icon */}
+                        <div className="absolute -top-6 md:-top-8 bg-[#22A046] w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full text-white text-lg md:text-3xl shadow-md">
+                            <FaCheck />
+                        </div>
+
+                        {/* Text */}
+                        <p className="text-black font-normal text-base md:text-lg leading-tight">
+                            {benefit}
+                        </p>
+                    </div>
+                ))}
+            </div>
+
+            {/* Footer */}
+            {footer && (
+                <p className="text-black text-sm md:text-base max-w-4xl mx-auto mt-10">
+                    {footer}
+                </p>
+            )}
+        </>
+    )
+}
+
+
+
+export const ApplicationSection1 = ({ title, description, listTitle, listItems, image }) => {
+    return (
+        <>
+            <section className="py-12 px-6 md:px-12 bg-white">
+                <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
+
+                    {/* Left Content */}
+                    <div className="w-full md:w-1/2">
+                        <h2 className="text-2xl md:text-3xl font-medium mb-6">{title}</h2>
+                        <p className="text-black mb-4">{description}</p>
+
+                        {listTitle && <p className="font-semibold text-gray-900 mb-2">{listTitle}</p>}
+
+                        <ul className="list-disc list-inside space-y-2 text-black">
+                            {listItems.map((item, index) => (
+                                <li key={index} className="leading-snug">{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Right Image */}
+                    <div className="w-full md:w-1/2 flex justify-center">
+                        <img
+                            src={image}
+                            alt={title}
+                            className="w-full max-w-md rounded-2xl object-contain shadow-md"
+                        />
                     </div>
                 </div>
             </section>
