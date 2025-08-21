@@ -13,7 +13,7 @@ const navigation = [
     submenu: [
       { name: "Axial Fans", href: "/products/axial-fans" },
       { name: "Mobility Fans", href: "/products/mobility-fans" },
-      { name: "Backward Curved Centrifugal Fan", href: "#" },
+      { name: "Backward Curved Centrifugal Fan", href: "/products/backward-curved-centrifugal-fan" },
       {
         name: "Forward Curves Centrifugal Fan",
         href: "#",
@@ -22,7 +22,7 @@ const navigation = [
           { name: "Single Inlet Centrifugal Fans", href: "#" },
         ],
       },
-      { name: "Compact Fan", href: "#" },
+      { name: "Compact Fan", href: "/products/compact-fan" },
       { name: "Box Fan (For Refrigeration)", href: "#" },
     ],
   },
@@ -86,9 +86,8 @@ const Header = () => {
                   <div key={index} className="relative group">
                     <Link
                       to={item.href}
-                      className={`flex items-center px-1 mx-2 py-2 text-base transition-colors duration-200 ${
-                        isActive ? "text-[#030303] border-b-3 border-[#FF0000]" : "text-[#030303] hover:text-[#FF0000]"
-                      }`}
+                      className={`flex items-center px-1 mx-2 py-2 text-base transition-colors duration-200 ${isActive ? "text-[#030303] border-b-3 border-[#FF0000]" : "text-[#030303] hover:text-[#FF0000]"
+                        }`}
                     >
                       {item.name}
                       {item.submenu && <MdKeyboardArrowDown className="ml-1" />}
@@ -141,101 +140,98 @@ const Header = () => {
         </div>
 
         {/* Mobile Sidebar */}
-        <div className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-40 transform ${
-  menuOpen ? "translate-x-0" : "-translate-x-full"
-} transition-transform duration-300 ease-in-out md:hidden`}>
-  <ul className="mt-12 px-4 space-y-4">
-  {navigation.map((item, index) => {
-    const hasSubmenu = !!item.submenu;
-    const isOpen = openMenus[`main-${index}`];
+        <div className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-40 transform ${menuOpen ? "translate-x-0" : "-translate-x-full"
+          } transition-transform duration-300 ease-in-out md:hidden`}>
+          <ul className="mt-12 px-4 space-y-4">
+            {navigation.map((item, index) => {
+              const hasSubmenu = !!item.submenu;
+              const isOpen = openMenus[`main-${index}`];
 
-    const handleMainClick = () => {
-      if (hasSubmenu) {
-        toggleSubMenu(`main-${index}`);
-      } else {
-        setMenuOpen(false);
-      }
-    };
-
-    return (
-      <li key={index}>
-        <div
-          className="flex justify-between items-center cursor-pointer"
-          onClick={handleMainClick}
-        >
-          <span
-            className={`text-base py-2 ${isOpen ? "text-[#469E8E]" : "text-gray-700"}`}
-          >
-            {item.name}
-          </span>
-          {hasSubmenu && (
-            <MdKeyboardArrowDown
-              className={`transform transition-transform duration-300 ${
-                isOpen ? "rotate-180" : ""
-              }`}
-            />
-          )}
-        </div>
-
-        {/* Submenu */}
-        {hasSubmenu && isOpen && (
-          <ul className="pl-4 space-y-1">
-            {item.submenu.map((subItem, subIndex) => {
-              const hasChildSubmenu = !!subItem.submenu;
-              const isSubOpen = openMenus[`sub-${index}-${subIndex}`];
-
-              const handleSubClick = () => {
-                if (hasChildSubmenu) {
-                  toggleSubMenu(`sub-${index}-${subIndex}`);
+              const handleMainClick = () => {
+                if (hasSubmenu) {
+                  toggleSubMenu(`main-${index}`);
                 } else {
                   setMenuOpen(false);
                 }
               };
 
               return (
-                <li key={subIndex}>
+                <li key={index}>
                   <div
                     className="flex justify-between items-center cursor-pointer"
-                    onClick={handleSubClick}
+                    onClick={handleMainClick}
                   >
-                    <span className="text-sm text-gray-600 py-1">
-                      {subItem.name}
+                    <span
+                      className={`text-base py-2 ${isOpen ? "text-[#469E8E]" : "text-gray-700"}`}
+                    >
+                      {item.name}
                     </span>
-                    {hasChildSubmenu && (
+                    {hasSubmenu && (
                       <MdKeyboardArrowDown
-                        className={`transform transition-transform duration-300 ${
-                          isSubOpen ? "rotate-180" : ""
-                        }`}
+                        className={`transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                          }`}
                       />
                     )}
                   </div>
 
-                  {/* Nested Submenu */}
-                  {hasChildSubmenu && isSubOpen && (
+                  {/* Submenu */}
+                  {hasSubmenu && isOpen && (
                     <ul className="pl-4 space-y-1">
-                      {subItem.submenu.map((child, childIndex) => (
-                        <li key={childIndex}>
-                          <Link
-                            to={child.href}
-                            onClick={() => setMenuOpen(false)}
-                            className="block text-sm text-gray-500"
-                          >
-                            {child.name}
-                          </Link>
-                        </li>
-                      ))}
+                      {item.submenu.map((subItem, subIndex) => {
+                        const hasChildSubmenu = !!subItem.submenu;
+                        const isSubOpen = openMenus[`sub-${index}-${subIndex}`];
+
+                        const handleSubClick = () => {
+                          if (hasChildSubmenu) {
+                            toggleSubMenu(`sub-${index}-${subIndex}`);
+                          } else {
+                            setMenuOpen(false);
+                          }
+                        };
+
+                        return (
+                          <li key={subIndex}>
+                            <div
+                              className="flex justify-between items-center cursor-pointer"
+                              onClick={handleSubClick}
+                            >
+                              <span className="text-sm text-gray-600 py-1">
+                                {subItem.name}
+                              </span>
+                              {hasChildSubmenu && (
+                                <MdKeyboardArrowDown
+                                  className={`transform transition-transform duration-300 ${isSubOpen ? "rotate-180" : ""
+                                    }`}
+                                />
+                              )}
+                            </div>
+
+                            {/* Nested Submenu */}
+                            {hasChildSubmenu && isSubOpen && (
+                              <ul className="pl-4 space-y-1">
+                                {subItem.submenu.map((child, childIndex) => (
+                                  <li key={childIndex}>
+                                    <Link
+                                      to={child.href}
+                                      onClick={() => setMenuOpen(false)}
+                                      className="block text-sm text-gray-500"
+                                    >
+                                      {child.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </li>
+                        );
+                      })}
                     </ul>
                   )}
                 </li>
               );
             })}
           </ul>
-        )}
-      </li>
-    );
-  })}
-</ul>
-</div>
+        </div>
       </header>
     </>
   );
