@@ -93,8 +93,6 @@ export const InfoSection = ({ title, itemsLeft = [], itemsRight = [] }) => {
                             </div>
                         ))}
                     </div>
-
-
                     <div className="flex flex-col items-center md:items-start gap-12 pl-0 md:pl-8 mt-12 md:mt-0">
                         {itemsRight.map((item, idx) => (
                             <div
@@ -110,6 +108,9 @@ export const InfoSection = ({ title, itemsLeft = [], itemsRight = [] }) => {
                                 <p className="text-sm md:text-base">{item.text}</p>
                             </div>
                         ))}
+
+
+
                     </div>
                 </div>
             </section>
