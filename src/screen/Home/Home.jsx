@@ -1,19 +1,16 @@
-import React from 'react'
-import {  Banner, Slider } from '../../components/Home/BannerAboutSlider'
-import { Feature, Product } from '../../components/Home/FeatureProduct'
-import { Contact, Form } from '../../components/Home/contactForm'
+import React from "react";
+import { Banner, Slider } from "../../components/Home/BannerAboutSlider.jsx";
+import { Feature, Product } from "../../components/Home/FeatureProduct.jsx";
 
 function Home() {
   return (
     <>
       <Banner />
       <Slider />
-      <Feature/>
-      <Product/>
-      <Contact/>
-      <Form/>
+      {/* <Feature /> */}
+      <Product />
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
