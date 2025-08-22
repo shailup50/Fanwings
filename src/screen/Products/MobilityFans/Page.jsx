@@ -18,7 +18,7 @@ import key5 from "../../../assets/mobility/key5.svg"
 import buspdf from "../../../assets/mobility/Bus.pdf"
 import railwaypdf from "../../../assets/mobility/Railways.pdf"
 
-
+import { motion } from "framer-motion";
 
 
 
@@ -34,7 +34,7 @@ function MobilityFans() {
     button2: "Railway",
     link2: railwaypdf,
     img: Banner,
-    targetvalue:true
+    targetvalue: true
   }
   const advantages = [
     {
@@ -146,17 +146,27 @@ and vibration resistance are crucial.
 
       <section className="py-4 md:py-8 px-4 md:px-8 lg:px-16 bg-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-medium text-black mb-10 md:mb-16 ">
+          <motion.h2
+            className="text-2xl md:text-3xl font-medium text-black mb-10 md:mb-16"
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+          >
             KEY APPLICATIONS
-          </h2>
+          </motion.h2>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-14 md:gap-14 md:w-[95%] mx-auto">
             {applications.map((app, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="border-3 md:border-4 border-[#22A046] rounded-3xl md:rounded-4xl px-3 md:px-6 py-10 md:pt-16 relative flex flex-col items-center text-center justify-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.2, type: "spring" }}
+                viewport={{ once: false }}
+                whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(0,0,0,0.15)" }}
               >
-
                 <div className="absolute -top-6 md:-top-8 bg-[#22A046] w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full text-white text-lg md:text-3xl shadow-md">
                   <FaCheck />
                 </div>
@@ -164,43 +174,49 @@ and vibration resistance are crucial.
                 <p className="text-black font-normal text-base md:text-lg leading-tight">
                   {app.title}
                 </p>
-
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-[#012A8D] py-12 px-4 md:px-8 lg:px-16 rounded-3xl text-white max-w-7xl mx-auto mt-10 mb-14">
-      <h2 className="text-2xl md:text-3xl font-medium text-center mb-10">
-        KEY FEATURES
-      </h2>
+      <motion.section
+        className="bg-[#012A8D] py-12 px-4 md:px-8 lg:px-16 rounded-3xl text-white max-w-7xl mx-auto mt-10 mb-14"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <motion.h2
+          className="text-2xl md:text-3xl font-medium text-center mb-10"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        >
+          KEY FEATURES
+        </motion.h2>
 
-
-      <div className="flex flex-col  md:flex-row justify-between items-center1 vertical_line gap-8 md:gap-4">
-        {features.map((item, index) => (
-          <div key={index} className="flex md:flex-col items-center text-center relative md:gap-0 gap-5">
-            <div className="bg-white p-4 md:p-6 rounded-full text-[#012A8D] z-10 max-w-16 max-h-16 md:max-w-24 md:max-h-24 flex items-center justify-center">
-              <img src={item.icon} alt={item.text}  />
-            </div>
-            <p className="text-[15px] text-left md:text-center md:text-base font-light   md:mt-6 md:max-w-[160px]">{item.text}</p>
-
-
-          </div>
-        ))}
-      </div>
-
-      {/* <div className="md:hidden flex flex-col gap-8 relative pl-6 border-l border-white/50 mt-8">
-        {features.map((item, index) => (
-          <div key={index} className="flex items-start gap-4 relative">
-            <div className="bg-white text-[#012A8D] p-3 rounded-full z-10">
-              {item.icon}
-            </div>
-            <p className="text-sm text-white">{item.text}</p>
-          </div>
-        ))}
-      </div> */}
-    </section>
+        <div className="flex flex-col md:flex-row justify-between items-center1 vertical_line gap-8 md:gap-4">
+          {features.map((item, index) => (
+            <motion.div
+              key={index}
+              className="flex md:flex-col items-center text-center relative md:gap-0 gap-5"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2, ease: "easeOut" }}
+              whileHover={{ scale: 1.05 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-white p-4 md:p-6 rounded-full text-[#012A8D] z-10 max-w-16 max-h-16 md:max-w-24 md:max-h-24 flex items-center justify-center shadow-lg">
+                <img src={item.icon} alt={item.text} />
+              </div>
+              <p className="text-[15px] text-left md:text-center md:text-base font-light md:mt-6 md:max-w-[160px]">
+                {item.text}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
 
     </>
   )

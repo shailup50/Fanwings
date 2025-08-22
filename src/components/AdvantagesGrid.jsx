@@ -1,59 +1,96 @@
 import React from 'react';
+import { motion } from "framer-motion";
 
 const AdvantagesGrid = ({ items = [], heading, subheading }) => {
     const visibleItems = items.filter(item => item.title || item.icon || item.description);
 
     return (
-        <div className="bg-[#0033A0] text-white rounded-2xl py-10  p-6 md:p-10">
-            <h2 className="text-center text-2xl md:text-3xl font-medium mb-8 md:mb-12">{heading}</h2>
-            {subheading && (
-
-                <h3 className='bg-[#1FA54D] mb-12 md:-mt-4 rounded-lg p-2 text-base font-light md:text-xl text-white text-center w-[90%] md:w-[80%] mx-auto'>{subheading}</h3>
-            )
-            }
-            <div
-                className={`flex flex-col md:flex-row justify-between items-stretch gap-8`}
+        <div className="bg-[#0033A0] text-white rounded-2xl py-10 p-6 md:p-10">
+            <motion.h2
+                className="text-center text-2xl md:text-3xl font-medium mb-8 md:mb-12"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: false }}
             >
+                {heading}
+            </motion.h2>
+
+            {subheading && (
+                <motion.h3
+                    className="bg-[#1FA54D] mb-12 md:-mt-4 rounded-lg p-2 text-base font-light md:text-xl text-white text-center w-[90%] md:w-[80%] mx-auto"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                    viewport={{ once: false }}
+                >
+                    {subheading}
+                </motion.h3>
+            )}
+
+            <div className="flex flex-col md:flex-row justify-between items-stretch gap-8">
                 {visibleItems.map((item, index) => (
-                    <div
+                    <motion.div
                         key={index}
-                        className={`flex-1 flex flex-col items-center1 relative px-4`}
+                        className="flex-1 flex flex-col items-center1 relative px-4"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+                        viewport={{ once: false }}
+                        whileHover={{ scale: 1.05 }}
                     >
                         {/* Top border (mobile), Left border (desktop) */}
                         {index !== 0 && (
-                            <div
-                                className={`${
-                                    // Vertical border on desktop, horizontal on mobile
-                                    'hidden md:block absolute left-0 top-4 bottom-4'
-                                    }`}
-                            >
+                            <div className="hidden md:block absolute left-0 top-4 bottom-4">
                                 <div className="w-[1px] h-full bg-[#fff] relative -left-4">
                                     <span className="absolute -top-[6px] -right-[2.5px] h-2 w-2 rounded-full bg-[#fff]"></span>
                                 </div>
                             </div>
                         )}
                         {index !== 0 && (
-                            <div
-                                className={`${'block md:hidden w-full h-[1px] bg-[#fff] relative mt-2 mb-8'
-                                    }`}
-                            >
+                            <div className="block md:hidden w-full h-[1px] bg-[#fff] relative mt-2 mb-8">
                                 <span className="absolute -bottom-[3px] right-0 h-2 w-2 rounded-full bg-[#fff]"></span>
                             </div>
                         )}
 
                         {item.icon && (
-                            <div className="text-4xl mb-4">
-                                <img src={item.icon} alt={item.title} className='h-10 object-contain w-10' />
-
-                            </div>
+                            <motion.div
+                                className="text-4xl mb-4"
+                                initial={{ scale: 0.8, opacity: 0 }}
+                                whileInView={{ scale: 1, opacity: 1 }}
+                                transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+                                viewport={{ once: false }}
+                                whileHover={{ rotate: 5 }}
+                            >
+                                <img
+                                    src={item.icon}
+                                    alt={item.title}
+                                    className="h-10 w-10 object-contain"
+                                />
+                            </motion.div>
                         )}
+
                         {item.title && (
-                            <h3 className="text-lg uppercase md:text-xl mb-4">{item.title}</h3>
+                            <motion.h3
+                                className="text-lg uppercase md:text-xl mb-4"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 0.3 }}
+                                viewport={{ once: false }}
+                            >
+                                {item.title}
+                            </motion.h3>
                         )}
 
-                        <p className="text-[15px] text-abse text-white" dangerouslySetInnerHTML={{ __html: item.description }} />
-
-                    </div>
+                        <motion.p
+                            className="text-[15px] text-abse text-white"
+                            dangerouslySetInnerHTML={{ __html: item.description }}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                            viewport={{ once: false }}
+                        />
+                    </motion.div>
                 ))}
             </div>
         </div>

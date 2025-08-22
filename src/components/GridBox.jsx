@@ -8,51 +8,68 @@ export const GridBox = ({ data }) => {
         <>
 
             <div className="max-w-7xl mx-auto text-center">
-
                 {data.heading && (
-                    <h2 className="text-2xl md:text-3xl  text-black uppercase font-medium mb-4 md:mb-8">
+                    <motion.h2
+                        className="text-2xl md:text-3xl text-black uppercase font-medium mb-4 md:mb-8"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        viewport={{ once: false }}
+                    >
                         {data.heading}
-                    </h2>
+                    </motion.h2>
                 )}
 
                 {data.greenBox && (
-                    <div className="bg-[#1FA54D] text-white rounded-md p-6 mb-12 max-w-3xl mx-auto">
+                    <motion.div
+                        className="bg-[#1FA54D] text-white rounded-md p-6 mb-12 max-w-3xl mx-auto"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        viewport={{ once: false }}
+                    >
                         <p className="text-sm md:text-base font-normal leading-relaxed">
                             {data.greenBox}
                         </p>
-                    </div>
+                    </motion.div>
                 )}
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 relative">
                     {data.features.map((feature, idx) => (
-                        <div key={idx} className="flex flex-col items-center relative">
-
-                            <div className="flex items-center mb-4   relative w-full justify-center h-full">
-
+                        <motion.div
+                            key={idx}
+                            className="flex flex-col items-center relative"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: idx * 0.2, ease: "easeOut" }}
+                            viewport={{ once: false }}
+                        >
+                            <div className="flex items-center mb-4 relative w-full justify-center h-full">
                                 {((idx + 1) % 3 !== 0) && (
-                                    <>
-                                        <div class="hidden md:block absolute right-0 top-4 bottom-4">
-                                            <div class="w-[1px] h-full border border-dashed border-[#1FA54D] relative -right-6">
-                                                <span class="absolute -top-[6px] -right-[4px] h-2 w-2 rounded-full bg-[#1FA54D]"></span>
-                                            </div>
+                                    <div className="hidden md:block absolute right-0 top-4 bottom-4">
+                                        <div className="w-[1px] h-full border border-dashed border-[#1FA54D] relative -right-6">
+                                            <span className="absolute -top-[6px] -right-[4px] h-2 w-2 rounded-full bg-[#1FA54D]"></span>
                                         </div>
-                                    </>
+                                    </div>
                                 )}
-                                <div className="border border-black p-4   shadow-sm w-full h-full text-center">
+                                <div className="border border-black p-4 shadow-sm w-full h-full text-center">
                                     <p className="text-[15px] md:text-base">{feature}</p>
                                 </div>
                             </div>
-
-
-
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
 
                 {data.footer && (
-                    <p className="mt-12 text-black text-[15px] md:text-base max-w-4xl mx-auto">
+                    <motion.p
+                        className="mt-12 text-black text-[15px] md:text-base max-w-4xl mx-auto"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        viewport={{ once: false }}
+                    >
                         {data.footer}
-                    </p>
+                    </motion.p>
                 )}
             </div>
 
@@ -330,7 +347,7 @@ export const ApplicationSection1 = ({ title, description, listTitle, listItems, 
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                     >
                         {title && (
                             <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-900">
@@ -362,7 +379,7 @@ export const ApplicationSection1 = ({ title, description, listTitle, listItems, 
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                     >
                         <img
                             src={image}
