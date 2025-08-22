@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import { BsArrowRightCircle } from "react-icons/bs";
-
+import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -56,6 +56,7 @@ export const Banner = () => {
   return (
     <>
       <div>
+        {/* Swiper Section */}
         <section className="relative">
           <Swiper
             modules={[Autoplay, Pagination]}
@@ -66,7 +67,7 @@ export const Banner = () => {
           >
             {slides.map((slide, idx) => (
               <SwiperSlide key={idx}>
-                <div className="relativeh-full w-full">
+                <div className="relative h-full w-full">
                   <img
                     src={slide.img}
                     alt="Slide"
@@ -80,26 +81,47 @@ export const Banner = () => {
           </Swiper>
         </section>
 
+        {/* About Section */}
         <section className="bg-white py-12 px-6 max-w-7xl mx-auto grid md:grid-cols-12 gap-12 md:gap-20 items-center">
-          <div className="md:col-span-5">
+          <motion.div
+            className="md:col-span-5"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: false }}
+          >
             <p className="text-[#E2000F] tracking-wide mb-2">{about.tag}</p>
-            <h2 className="text-2xl md:text-3xl text-[#052B98] font-medium leading-9 md:leading-11  mb-6">
+            <h2 className="text-2xl md:text-3xl text-[#052B98] font-medium leading-9 md:leading-11 mb-6">
               {about.title}
             </h2>
             <div className="w-full h-[2px] bg-[#1FA54D] relative">
               <span className="absolute -bottom-[6px] right-0 h-3 w-3 rounded-full bg-[#1FA54D]"></span>
             </div>
-          </div>
-          <div className="md:col-span-7 ">
+          </motion.div>
+
+          <motion.div
+            className="md:col-span-7"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: false }}
+          >
             <p
               className="text-black opacity-80 text-base md:text-[17px] font-light mb-8"
               dangerouslySetInnerHTML={{ __html: about.description }}
             />
-            {/* <button className="text-[#1FA54D] font-medium flex items-center gap-4 hover:underline">
-                            {about.readMore}
-                            <BsArrowRightCircleFill className="text-lg" />
-                        </button> */}
-          </div>
+
+            {/* Button with hover + motion */}
+            <motion.button
+              whileHover={{ scale: 1.05, x: 5 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 200 }}
+              className="text-[#1FA54D] font-medium flex items-center gap-4 hover:underline"
+            >
+              {about.readMore}
+              <BsArrowRightCircleFill className="text-lg" />
+            </motion.button>
+          </motion.div>
         </section>
       </div>
     </>
@@ -235,8 +257,18 @@ export const Slider = () => {
           >
             {sliderData.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="flex flex-col md:flex-row items-center text-white  relative">
-                  <div className="py-12 pb-40 md:py-24  w-full md:w-1/2 order-2 md:order-1">
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="flex flex-col md:flex-row items-center text-white  relative"
+                >
+                  <motion.div
+                    initial={{ x: -80, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
+                    className="py-12 pb-40 md:py-24  w-full md:w-1/2 order-2 md:order-1"
+                  >
                     <h4 className="text-2xl md:text-3xl mb-4 -mt-8 md:mt-0">
                       {item.subtitle}
                     </h4>
@@ -245,37 +277,47 @@ export const Slider = () => {
                       className="mb-6 md:mb-10 text-sm font-light md:text-base"
                       dangerouslySetInnerHTML={{ __html: item.description }}
                     ></p>
-                    <button className="bg-[#1FA54D] hover:bg-white text-white py-3 md:py-4 px-6 md:px-10 rounded-full flex items-center gap-4 hover:text-[#1FA54D]">
+
+                    <motion.button
+
+                      whileTap={{ scale: 0.95 }}
+                      className="bg-[#1FA54D] hover:bg-white text-white py-3 md:py-4 px-6 md:px-10 rounded-full flex items-center gap-4 hover:text-[#1FA54D]"
+                    >
                       {item.btnText}
                       <BsArrowRightCircle className="text-xl" />
-                    </button>
-                  </div>
-                  <div className="w-full md:w-1/2 p-8 order-1 md:order-2">
+                    </motion.button>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ x: 80, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
+                    className="w-full md:w-1/2 p-8 order-1 md:order-2"
+                  >
                     <div className="overflow-hidden">
-                      <img
+                      <motion.img
                         src={item.image}
                         alt={item.title}
                         className="w-full object-cover rounded-xl"
+                        whileHover={{ scale: 1.01 }}
+                        transition={{ duration: 0.4 }}
                       />
                     </div>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               </SwiperSlide>
             ))}
 
-            {/* Custom Arrows */}
-            <div className="flex justify-between items-center   style2_slider z-10">
+            <div className="flex justify-between items-center style2_slider z-10">
               <div className="flex items-center middle_arrow gap-10 lg:gap-14">
                 <button
-                  className={`swiper-button-prev   order-1 rounded-full   !text-white  px-4 py-2 ${
-                    isBeginning ? "opacity-100 cursor-not-allowed" : ""
-                  }`}
+                  className={`swiper-button-prev order-1 rounded-full !text-white px-4 py-2 ${isBeginning ? "opacity-100 cursor-not-allowed" : ""
+                    }`}
                   disabled={isBeginning}
                 ></button>
                 <button
-                  className={`swiper-button-next   order-3 rounded-full !text-white      px-4 py-2 ${
-                    isEnd ? "opacity-100 cursor-not-allowed" : ""
-                  }`}
+                  className={`swiper-button-next order-3 rounded-full !text-white px-4 py-2 ${isEnd ? "opacity-100 cursor-not-allowed" : ""
+                    }`}
                   disabled={isEnd}
                 ></button>
                 <div className="order-2">
@@ -283,15 +325,6 @@ export const Slider = () => {
                 </div>
               </div>
             </div>
-
-            {/* <div className=" bottom-10 left-10 z-50 flex gap-4">
-                        <button ref={prevRef} className="text-white bg-[#2ecc71] p-3 rounded-full">
-                            <FaArrowLeft />
-                        </button>
-                        <button ref={nextRef} className="text-white bg-[#2ecc71] p-3 rounded-full">
-                            <FaArrowRight />
-                        </button>
-                    </div> */}
           </Swiper>
         </div>
       </section>

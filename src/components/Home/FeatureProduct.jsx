@@ -5,7 +5,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
-
+import { motion } from "framer-motion";
 import { IoArrowForwardCircleSharp } from "react-icons/io5";
 import { IoMdArrowDropright } from "react-icons/io";
 import { GoChevronRight, GoChevronLeft } from "react-icons/go";
@@ -173,18 +173,16 @@ export const Feature = () => {
           <div className="flex gap-3 justify-end">
             <button
               ref={prevRef}
-              className={`p-2 rounded-full ${
-                isBeginning ? "bg-[#1FA54D] opacity-50" : "bg-[#1FA54D]"
-              } text-white`}
+              className={`p-2 rounded-full ${isBeginning ? "bg-[#1FA54D] opacity-50" : "bg-[#1FA54D]"
+                } text-white`}
               disabled={isBeginning}
             >
               <GoChevronLeft className="text-xl" />
             </button>
             <button
               ref={nextRef}
-              className={`p-2 rounded-full ${
-                isEnd ? "bg-[#1FA54D] opacity-50" : "bg-[#1FA54D]"
-              } text-white`}
+              className={`p-2 rounded-full ${isEnd ? "bg-[#1FA54D] opacity-50" : "bg-[#1FA54D]"
+                } text-white`}
               disabled={isEnd}
             >
               <GoChevronRight className="text-xl" />
@@ -437,41 +435,52 @@ export const Product = () => {
       <div className="grid grid-cols-1 items-center gap-4 max-w-7xl mx-auto px-6">
         <Swiper
           modules={[Navigation, Autoplay]}
-          autoplay={{ delay: 8000, disableOnInteraction: false }} // ← ADD THIS
+          autoplay={{ delay: 8000, disableOnInteraction: false }}
           onSwiper={setSwiperInstance}
           onSlideChange={handleSlideChange}
           className="w-full"
         >
           {productData.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <div
-                className={`grid grid-cols-1  lg:grid-cols-12 items-center gap-2 mt-5 md:mt-0 ${
-                  item.subcontent ? "mb-[3rem]" : "mb-1"
-                }`}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: false }}
+                className={`grid grid-cols-1 lg:grid-cols-12 items-center gap-2 mt-5 md:mt-0 ${item.subcontent ? "mb-[3rem]" : "mb-1"
+                  }`}
               >
                 {/* Text Content */}
-                <div className="lg:col-span-7 space-y-4 order-2 lg:order-1 md:w-[88%]">
+                <motion.div
+                  initial={{ x: -60, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
+                  viewport={{ once: false }}
+                  className="lg:col-span-7 space-y-4 order-2 lg:order-1 md:w-[88%]"
+                >
                   <div className="md:order-1 order-2 flex items-center gap-5 mb-2 font-light">
                     <img src={icon} alt="icon" height={35} width={35} />
                     <span className="text-2xl md:text-3xl">Product Series</span>
                   </div>
-                  <h2 className="text-lg md:text-xl font-normal ">
-                    {item.title}
-                  </h2>
+                  <h2 className="text-lg md:text-xl font-normal ">{item.title}</h2>
+
+                  {/* Subcontent / Specs */}
                   {item.subcontent ? (
                     <div
-                      className={`${
-                        !item.image2
-                          ? "flex md:flex-row flex-col md:gap-1 gap-4"
-                          : "space-y-4"
-                      }`}
+                      className={`${!item.image2
+                        ? "flex md:flex-row flex-col md:gap-1 gap-4"
+                        : "space-y-4"
+                        }`}
                     >
                       {item.subcontent.map((sub, i) => (
-                        <div
+                        <motion.div
                           key={i}
-                          className={`${
-                            !item.image2 ? "w-full md:w-1/2" : "w-full"
-                          }`}
+                          initial={{ opacity: 0, x: -30 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.6, delay: i * 0.2 }}
+                          viewport={{ once: false }}
+                          className={`${!item.image2 ? "w-full md:w-1/2" : "w-full"
+                            }`}
                         >
                           <div className="flex items-center">
                             <span className="text-[#052B98] mt-1 text-xl">
@@ -481,7 +490,6 @@ export const Product = () => {
                               {sub.Subcontenttitle}
                             </h2>
                           </div>
-
                           <ul className="text-sm md:text-[14px] space-y-1 mb-2">
                             {sub.Subcontentspec?.map((spec, j) => (
                               <li
@@ -495,79 +503,98 @@ export const Product = () => {
                               </li>
                             ))}
                           </ul>
-                        </div>
+                        </motion.div>
                       ))}
                     </div>
                   ) : (
                     <ul className="text-sm md:text-[15px] space-y-1 mb-2">
                       {item.specs?.map((spec, i) => (
-                        <li
+                        <motion.li
                           key={i}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.6, delay: i * 0.15 }}
+                          viewport={{ once: false }}
                           className="flex items-start font-light mb-2 gap-2"
                         >
                           <span className="text-[#052B98] mt-1">
                             <IoMdSettings />
                           </span>
                           {spec}
-                        </li>
+                        </motion.li>
                       ))}
                     </ul>
                   )}
+
+                  {/* Buttons with Hover */}
                   <div className="flex flex-wrap gap-3 pt-1">
                     {item.buttons?.map((btn, i) => (
-                      <button
+                      <motion.button
                         key={i}
+                        whileHover={{
+                          scale: 1.05,
+                          backgroundColor: "#052B98",
+                        }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ duration: 0.3 }}
                         className="px-4 py-2 font-normal text-sm flex items-center gap-1 text-white transition"
                       >
                         <IoMdArrowDropright className="text-lg" />
                         {btn}
-                      </button>
+                      </motion.button>
                     ))}
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Image */}
-                <div className="lg:col-span-3 order-2 ">
+                <motion.div
+                  initial={{ x: 80, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
+                  viewport={{ once: false }}
+                  className="lg:col-span-3 order-2 "
+                >
                   <div className="flex md:flex-row flex-col justify-center items-center">
-                    <img
+                    <motion.img
                       src={item.image}
                       alt={item.title}
-                      className={`w-full ${
-                        item.image2
-                          ? "max-h-[150px] md:max-h-[350px]"
-                          : "max-h-[400px]"
-                      } object-contain`}
+                      className={`w-full ${item.image2
+                        ? "max-h-[150px] md:max-h-[350px]"
+                        : "max-h-[400px]"
+                        } object-contain`}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.4 }}
                     />
-
                     {item.image2 && (
-                      <img
+                      <motion.img
                         src={item.imageTwo}
                         alt={item.title}
                         className="w-full max-h-[150px] md:max-h-[500px] object-contain"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.4 }}
                       />
                     )}
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <div className="flex absolute left-[35%] md:left-32 bottom-7  gap-3 z-10">
+        {/* Navigation */}
+        <div className="flex absolute left-[35%] md:left-32 bottom-7 gap-3 z-10">
           <button
             ref={prevRef}
-            className={`p-2 rounded-full ${
-              isBeginning ? "bg-[#1FA54D] opacity-50" : "bg-[#1FA54D]"
-            } text-white`}
+            className={`p-2 rounded-full ${isBeginning ? "bg-[#1FA54D] opacity-50" : "bg-[#1FA54D]"
+              } text-white`}
             disabled={isBeginning}
           >
             <GoChevronLeft className="text-xl" />
           </button>
           <button
             ref={nextRef}
-            className={`p-2 rounded-full ${
-              isEnd ? "bg-[#1FA54D] opacity-50" : "bg-[#1FA54D]"
-            } text-white`}
+            className={`p-2 rounded-full ${isEnd ? "bg-[#1FA54D] opacity-50" : "bg-[#1FA54D]"
+              } text-white`}
             disabled={isEnd}
           >
             <GoChevronRight className="text-xl" />
