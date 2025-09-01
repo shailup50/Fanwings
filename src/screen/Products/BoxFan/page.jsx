@@ -1,18 +1,18 @@
 import React from 'react'
 import { InnerPageBanner } from '../../../components/InnerPageBanner'
-import Banner from "../../../assets/box/box-type.webp"
+import Banner from "../../../assets/box/box-banner.webp"
 import { ApplicationSection1, BoxBenifits, FanCard, InfoSection } from '../../../components/GridBox'
-import fanImg from "../../../assets/box/BoxImg.webp"
+import fanImg from "../../../assets/box/box-type-fan.webp"
 import { Advantage } from '../../../components/Mobility/Advantage'
 import icon1 from "../../../assets/mobility/icon1.svg"
 import icon2 from "../../../assets/mobility/icon2.svg"
 import icon3 from "../../../assets/mobility/icon3.svg"
-import adimg from "../../../assets/box/advantage.webp"
+import adimg from "../../../assets/box/advantage1.webp"
 import tech1 from "../../../assets/compact/icon1.svg"
 import tech2 from "../../../assets/compact/icon2.svg"
 import tech3 from "../../../assets/compact/icon3.svg"
 import tech4 from "../../../assets/compact/icon4.svg"
-import application from "../../../assets/box/application.webp"
+import application from "../../../assets/box/application1.webp"
 
 
 
