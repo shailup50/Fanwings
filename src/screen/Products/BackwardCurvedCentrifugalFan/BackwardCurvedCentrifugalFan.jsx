@@ -28,6 +28,8 @@ function BackwardCurvedCentrifugalFan() {
             description:
                 'Plug fans are radial fans equipped with backward-curved blades. They are known for their compact design and their ability to deliver extremely high static  pressure.',
             image: product1,
+            buttonText: "Learn More",
+            buttonLink: "#"
         },
 
     ];

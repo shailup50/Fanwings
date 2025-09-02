@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 
-const InfoProduct = ({ title, description, image }) => {
+const InfoProduct = ({ title, description, image, subheading }) => {
     return (
         <section className="py-12 px-4 md:px-8 bg-white">
             <div className="max-w-7xl mx-auto flex flex-wrap md:flex-nowrap gap-10 items-center">
@@ -18,6 +18,17 @@ const InfoProduct = ({ title, description, image }) => {
                         className="text-2xl md:text-3xl text-black uppercase font-medium mb-4 md:mb-8"
                         dangerouslySetInnerHTML={{ __html: title }}
                     />
+                    {subheading && (
+                        <motion.h3
+                            className="bg-[#1FA54D] mb-6 px-6 p-2 text-base md:text-lg text-white text-center  inline-block"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                            viewport={{ once: false }}
+                        >
+                            {subheading}
+                        </motion.h3>
+                    )}
                     <p
                         className="text-black text-sm md:text-base leading-relaxed"
                         dangerouslySetInnerHTML={{ __html: description }}

@@ -19,7 +19,7 @@ const navigation = [
         href: "#",
         submenu: [
           { name: "Double Inlet Centrifugal Fans", href: "/products/forward-curves-centrifugal-fan/double-inlet-centrifugal-fans" },
-          { name: "Single Inlet Centrifugal Fans", href: "#" },
+          { name: "Single Inlet Centrifugal Fans", href: "/products/forward-curves-centrifugal-fan/single-inlet-centrifugal-fans" },
         ],
       },
       { name: "Compact Fan", href: "/products/compact-fan" },

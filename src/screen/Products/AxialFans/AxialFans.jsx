@@ -36,12 +36,16 @@ function AxialFans() {
             description:
                 'Internal rotor motors are compact and efficient motors where the rotor is located inside the stator, providing reliable performance and helping to reduce maintenance costs over time.',
             image: product1,
+            buttonText: "Learn More",
+            buttonLink: "#"
         },
         {
             title: 'EXTERNAL ROTOR',
             description:
                 'External rotor motors feature the rotor positioned around the outside of the stator, offering a compact design that improves cooling and enhances durability while keeping long-term operating costs low.',
             image: product2,
+            buttonText: "Learn More",
+            buttonLink: "#"
         },
     ];
     const advantagesData = [
