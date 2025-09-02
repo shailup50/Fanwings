@@ -20,7 +20,7 @@ const TechnologySection = ({ title, items = [] }) => {
                 {items.map((item, index) => (
                     <motion.div
                         key={index}
-                        className="flex items-start gap-4 flex-wrap group"
+                        className="flex items-start gap-4 flex-wrap md:flex-nowrap group"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.15 }}
@@ -47,7 +47,7 @@ const TechnologySection = ({ title, items = [] }) => {
 
                         {/* Description */}
                         <div>
-                            <p className="text-[15px] font-light text-white leading-relaxed md:w-[80%]">
+                            <p className="text-[15px] font-light text-white leading-relaxed md:w-[90%]">
                                 {item.description}
                             </p>
                         </div>

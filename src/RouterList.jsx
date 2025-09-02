@@ -21,6 +21,7 @@ import DoubleInletCentrifugalFans from './screen/Products/DoubleInletCentrifugal
 import BackwardCurvedCentrifugalFan from './screen/Products/BackwardCurvedCentrifugalFan/BackwardCurvedCentrifugalFan.jsx';
 import CompactFan from './screen/Products/CompactFan/CompactFan.jsx';
 import BoxFan from './screen/Products/BoxFan/page.jsx';
+import SingleInletCentrifugalFans from './screen/Products/SingleInletCentrifugalFans/SingleInletCentrifugalFans.jsx';
 function RouterList() {
     return (
         <>
@@ -32,7 +33,10 @@ function RouterList() {
                     <Route path='/products/axial-fans' element={<AxialFans />} />
                     <Route path='/products/mobility-fans' element={<MobilityFans />} />
                     <Route path='/products/forward-curves-centrifugal-fan/double-inlet-centrifugal-fans' element={<DoubleInletCentrifugalFans />} />
+                    <Route path='/products/forward-curves-centrifugal-fan/single-inlet-centrifugal-fans' element={<SingleInletCentrifugalFans />} />
+
                     <Route path='/products/backward-curved-centrifugal-fan' element={<BackwardCurvedCentrifugalFan />} />
+
                     <Route path='/products/compact-fan' element={<CompactFan />} />
                     <Route path='/products/box-fan' element={<BoxFan />} />
 

@@ -32,17 +32,21 @@ export const ProductType = ({ products = [] }) => {
                                     <span className="absolute -bottom-[6px] right-0 h-3 w-3 rounded-full bg-[#1FA54D]"></span>
                                 </div>
                             </div>
-                            <p className="text-black text-[15px] md:text-base">{product.description}</p>
-
+                            <p className="text-black text-[15px] md:text-base" dangerouslySetInnerHTML={{ __html: product.description }} />
                             {/* Example button with hover effect */}
-                            <motion.button
-                                className="mt-4 px-5 py-2 bg-[#1FA54D] text-white rounded-lg"
-                                whileHover={{ scale: 1.08, backgroundColor: "#15803d" }}
-                                whileTap={{ scale: 0.95 }}
-                                transition={{ type: "spring", stiffness: 250 }}
-                            >
-                                Learn More
-                            </motion.button>
+                            {product.buttonText && product.buttonLink && (
+                                <motion.a
+                                    href={product.buttonLink}
+
+                                    className="inline-block"
+                                    whileHover={{ scale: 1.08 }}
+                                    transition={{ type: "spring", stiffness: 250 }}
+                                >
+                                    <button className="mt-4 px-5 py-2 bg-[#1FA54D] text-white rounded-lg">
+                                        {product.buttonText}
+                                    </button>
+                                </motion.a>
+                            )}
                         </div>
                     </motion.div>
                 ))}
