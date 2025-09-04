@@ -6,11 +6,11 @@ import icon1 from "../../../assets/forward/icon1.svg"
 import icon2 from "../../../assets/forward/icon2.svg"
 import icon3 from "../../../assets/forward/icon3.svg"
 import InfoProduct from '../../../components/InfoProduct';
-import info1 from '../../../assets/forward/forward1.webp';
+import info1 from '../../../assets/single/ec-motors.webp';
 import ApplicationsSection from '../../../components/ApplicationsSection';
-import mainimg from "../../../assets/single/fan1.webp"
+import mainimg from "../../../assets/single/single-inlet.webp"
 import { ProductType } from '../../../components/ProductType';
-import product1 from "../../../assets/backward/product1.webp"
+import product1 from "../../../assets/single/centrifugal-fans.webp"
 import TechnologySection from '../../../components/TechnologySection';
 import airflow from "../../../assets/products/airflow.svg"
 import motor from "../../../assets/products/motor.svg"
