@@ -9,6 +9,10 @@ body {
   font-family: var(--primary-font);
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .style2_slider {
   width: 270px;
   position: absolute;
