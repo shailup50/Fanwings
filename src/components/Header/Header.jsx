@@ -23,7 +23,16 @@ const navigation = [
         ],
       },
       { name: "Compact Fan", href: "/products/compact-fan" },
-      { name: "Box Fan (For Refrigeration)", href: "/products/box-fan" },
+      { name: "Box type fan", href: "/products/box-type-fan" },
+      { name: "AC Capacitance motor", href: "#" },
+      { name: "EC motor", href: "#" },
+      { name: "Shaded pole motor", href: "#" },
+      { name: "EC/BLDC", href: "#" },
+      { name: "Buses", href: "#" },
+      { name: "Railways", href: "#" },
+      { name: "Inline fans", href: "#" },
+
+
     ],
   },
   {
