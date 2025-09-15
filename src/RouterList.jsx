@@ -41,8 +41,8 @@ function RouterList() {
                     <Route path='/products/backward-curved-centrifugal-fan' element={<BackwardCurvedCentrifugalFan />} />
 
                     <Route path='/products/compact-fan' element={<CompactFan />} />
-                    <Route path='/products/box-fan' element={<BoxFan />} />
-                    {/* <Route path='/products/inline-fans' element={<InlineFans />} /> */}
+                    <Route path='/products/box-type-fan' element={<BoxFan />} />
+                    <Route path='/products/inline-fans' element={<InlineFans />} />
 
 
 
