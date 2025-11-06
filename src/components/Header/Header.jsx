@@ -28,8 +28,8 @@ const navigation = [
       { name: "EC motor", href: "#" },
       { name: "Shaded pole motor", href: "#" },
       { name: "EC/BLDC", href: "#" },
-      { name: "Buses", href: "#" },
-      { name: "Railways", href: "#" },
+      // { name: "Buses", href: "#" },
+      // { name: "Railways", href: "#" },
       { name: "Inline fans", href: "/products/inline-fans" },
 
 
