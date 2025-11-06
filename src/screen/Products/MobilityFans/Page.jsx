@@ -30,11 +30,11 @@ function MobilityFans() {
     space, performance, and durability are critical. <br><br> These compact and lightweight fans are ideal for applications in mobile systems, transportation, and medical equipment, where consistent cooling and ventilation are
     essential for safe and reliable operation.`,
     button1: "Bus",
-    link1: buspdf,
+    // link1: "#",
     button2: "Railway",
-    link2: railwaypdf,
+    // link2: "#",
     img: Banner,
-    targetvalue: true
+    targetvalue: false
   }
   const advantages = [
     {
