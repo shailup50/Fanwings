@@ -157,8 +157,10 @@ const Header = () => {
         </div>
 
         {/* Mobile Sidebar */}
-        <div className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-40 transform ${menuOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 ease-in-out md:hidden`}>
+        <div
+          className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-40 transform ${menuOpen ? "translate-x-0" : "-translate-x-full"
+            } transition-transform duration-300 ease-in-out md:hidden`}
+        >
           <ul className="mt-12 px-4 space-y-4">
             {navigation.map((item, index) => {
               const hasSubmenu = !!item.submenu;
@@ -178,11 +180,23 @@ const Header = () => {
                     className="flex justify-between items-center cursor-pointer"
                     onClick={handleMainClick}
                   >
-                    <span
-                      className={`text-base py-2 ${isOpen ? "text-[#469E8E]" : "text-gray-700"}`}
-                    >
-                      {item.name}
-                    </span>
+                    {item.href !== "#" ? (
+                      <Link
+                        to={item.href}
+                        onClick={() => setMenuOpen(false)}
+                        className={`text-base py-2 ${isOpen ? "text-[#469E8E]" : "text-gray-700"
+                          }`}
+                      >
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <span
+                        className={`text-base py-2 ${isOpen ? "text-[#469E8E]" : "text-gray-700"
+                          }`}
+                      >
+                        {item.name}
+                      </span>
+                    )}
                     {hasSubmenu && (
                       <MdKeyboardArrowDown
                         className={`transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""
@@ -212,9 +226,19 @@ const Header = () => {
                               className="flex justify-between items-center cursor-pointer"
                               onClick={handleSubClick}
                             >
-                              <span className="text-sm text-gray-600 py-1">
-                                {subItem.name}
-                              </span>
+                              {subItem.href !== "#" ? (
+                                <Link
+                                  to={subItem.href}
+                                  onClick={() => setMenuOpen(false)}
+                                  className="text-sm text-gray-600 py-1"
+                                >
+                                  {subItem.name}
+                                </Link>
+                              ) : (
+                                <span className="text-sm text-gray-600 py-1">
+                                  {subItem.name}
+                                </span>
+                              )}
                               {hasChildSubmenu && (
                                 <MdKeyboardArrowDown
                                   className={`transform transition-transform duration-300 ${isSubOpen ? "rotate-180" : ""
@@ -249,6 +273,7 @@ const Header = () => {
             })}
           </ul>
         </div>
+
       </header>
     </>
   );
