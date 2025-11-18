@@ -12,10 +12,10 @@ const navigation = [
     href: "#",
     submenu: [
       { name: "Axial Fans", href: "/products/axial-fans" },
-      { name: "Mobility Fans", href: "/products/mobility-fans" },
-      { name: "Backward Curved Centrifugal Fan", href: "/products/backward-curved-centrifugal-fan" },
+      // { name: "Mobility Fans", href: "/products/mobility-fans" },
+      { name: "Backward Curve Fan", href: "/products/backward-curved-centrifugal-fan" },
       {
-        name: "Forward Curves Centrifugal Fan",
+        name: "Forward Curve Fan",
         href: "#",
         submenu: [
           { name: "Double Inlet Centrifugal Fans", href: "/products/forward-curves-centrifugal-fan/double-inlet-centrifugal-fans" },
@@ -23,14 +23,14 @@ const navigation = [
         ],
       },
       { name: "Compact Fan", href: "/products/compact-fan" },
-      { name: "Box type fan", href: "/products/box-type-fan" },
-      { name: "AC Capacitance motor", href: "#" },
-      { name: "EC motor", href: "#" },
-      { name: "Shaded pole motor", href: "#" },
-      { name: "EC/BLDC", href: "#" },
+      // { name: "Box type fan", href: "/products/box-type-fan" },
+      // { name: "AC Capacitance motor", href: "#" },
+      // { name: "EC motor", href: "#" },
+      // { name: "Shaded pole motor", href: "#" },
+      { name: "Appliance Motor", href: "#" },
       // { name: "Buses", href: "#" },
       // { name: "Railways", href: "#" },
-      { name: "Inline fans", href: "/products/inline-fans" },
+      // { name: "Inline fans", href: "/products/inline-fans" },
 
 
     ],
